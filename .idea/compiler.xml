@@ -6,15 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="user" />
         <module name="eureka_server" />
+        <module name="inform" />
         <module name="pojo" />
+        <module name="reward_and_punishment" />
+        <module name="class_fee" />
+        <module name="score" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="class_fee" options="-parameters" />
       <module name="eureka_server" options="-parameters" />
+      <module name="inform" options="-parameters" />
       <module name="pojo" options="-parameters" />
+      <module name="reward_and_punishment" options="-parameters" />
+      <module name="score" options="-parameters" />
+      <module name="user" options="-parameters" />
     </option>
   </component>
 </project>
