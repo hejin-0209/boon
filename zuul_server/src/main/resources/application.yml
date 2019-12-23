@@ -1,0 +1,35 @@
+server:
+  port: 8086
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://boon:123456@localhost:9713/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 5
+    instance-id: boon.com
+    prefer-ip-address: true
+spring:
+  application:
+    name: boon-zuul
+
+zuul:
+  ignored-services:
+    "*"
+  routes:
+    class-fee: /class-fee-proxy/**
+    inform: /inform-proxy/**
+    reward-and-punishment: /reward-proxy/**
+    score: /score-proxy/**
+    user: /user-proxy/**
+
+  prefix: /boon
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: zuul
+    password: 123
+

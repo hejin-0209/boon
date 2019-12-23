@@ -1,0 +1,41 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: admin-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://boon:123456@127.0.0.1:9713/eureka
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+#分页的配置消息
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+#关于fastDfs的配置
+fdfs:
+  so-timeout: 1501
+  connect-timeout: 601
+  thumb-image:
+    width: 100
+    height: 100
+  tracker-list:
+    - 39.108.98.95:22122
+
+

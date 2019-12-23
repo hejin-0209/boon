@@ -1,0 +1,19 @@
+server:
+  port: 9713
+security:
+  basic:
+    enabled: true
+  user:
+    name: boon
+    password: 123456
+spring:
+  application:
+    name: eureka_server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://boon:123456@localhost:9713/eureka
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: eureka_server

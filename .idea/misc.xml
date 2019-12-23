@@ -5,12 +5,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/user/pom.xml" />
-        <option value="$PROJECT_DIR$/score/pom.xml" />
-        <option value="$PROJECT_DIR$/inform/pom.xml" />
-        <option value="$PROJECT_DIR$/class_fee/pom.xml" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul_server/pom.xml" />
+        <option value="$PROJECT_DIR$/admin_server/pom.xml" />
       </list>
     </option>
   </component>
