@@ -80,6 +80,13 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--导入实体类的依赖-->
+        <dependency>
+            <groupId>com.boon</groupId>
+            <artifactId>pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

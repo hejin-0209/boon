@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boon.reward_and_punishment.mapper.MoralMapper">
+    <resultMap id="moral" type="com.boon.pojo.Moral">
+        <id property="sno" column="sno"/>
+        <result property="politics" column="politics"/>
+        <result property="learn" column="learn"/>
+        <result property="culture" column="culture"/>
+        <result property="discipline" column="discipline"/>
+        <result property="rewardsSno" column="rewards_sno"/>
+        <result property="proportion" column="proportion"/>
+    </resultMap>
+
+    <insert id="addMoral" parameterType="com.boon.pojo.Moral">
+        insert into moral values(#{sno},#{politics},#{learn},#{culture},#{discipline},#{rewardsSno},#{proportion})
+    </insert>
+
+    <update id="update">
+        update moral
+        <set>
+            <if test="politics != null">
+                politics = #{politics},
+            </if>
+            <if test="learn != null">
+                learn = #{learn},
+            </if>
+            <if test="culture != null">
+                culture = #{culture},
+            </if>
+            <if test="discipline != null">
+                discipline = #{discipline},
+            </if>
+            <if test="rewardsSno != null and rewardsSno != ''">
+                rewards_sno = #{rewardsSno},
+            </if>
+            <if test="proportion != null">
+                proportion = #{proportion},
+            </if>
+        </set>
+        where sno = #{sno}
+    </update>
+
+    <select id="findBySno" resultMap="moral">
+        select * from moral where sno = #{sno}
+    </select>
+
+    <select id="convert" resultType="java.lang.Double">
+        SELECT (proportion*sum) AS `convert` FROM (SELECT DISTINCT proportion FROM moral) AS c,
+        (SELECT sum1+sum2 AS sum FROM
+        (SELECT politics+learn+culture+discipline AS sum1 FROM moral WHERE sno = #{sno}) AS a,
+        (SELECT final_value AS sum2 FROM rewards WHERE id =
+        (SELECT MAX(r.id) FROM rewards r INNER JOIN moral m ON r.sno = m.sno WHERE m.sno=#{sno}
+         AND type_id = 1)) AS b) AS d;
+    </select>
+    <select id="findAll" resultMap="moral">
+        select * from moral
+    </select>
+</mapper>

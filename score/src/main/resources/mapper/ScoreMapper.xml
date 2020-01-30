@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boon.score.mapper.ScoreMapper">
+
+    <resultMap id="score" type="com.boon.pojo.Score">
+        <id property="id" column="id"/>
+        <result property="sno" column="sno"/>
+        <result property="courseId" column="course_id"/>
+        <result property="score" column="score"/>
+        <result property="del" column="del"/>
+    </resultMap>
+
+    <insert id="addScore" parameterType="com.boon.pojo.Score">
+        insert into score values(null,#{sno},#{courseId},#{score},0)
+    </insert>
+
+    <select id="findScore" resultMap="score">
+        select * from score where del != 1
+    </select>
+
+    <select id="findBySno" resultMap="score">
+        select * from score where del != 1 and sno = #{sno}
+    </select>
+
+    <select id="findByCourseId" resultMap="score">
+        select * from score where del != 1 and course_id = #{courseId}
+    </select>
+
+    <select id="findCreditBySno" resultType="java.lang.Integer">
+        SELECT SUM(c.credit)from (score s INNER JOIN course c ON s.course_id = c.id)INNER JOIN `user` u
+        ON u.sno = s.sno where s.score >= 60 and u.sno = #{sno};
+    </select>
+
+    <select id="findLearnCreditBySno" resultType="java.lang.Integer">
+        SELECT SUM(c.credit)from (score s INNER JOIN course c ON s.course_id = c.id)INNER JOIN `user` u
+        ON u.sno = s.sno where u.sno = #{sno};
+    </select>
+
+    <select id="findTotalBySno" resultType="java.lang.Integer">
+        SELECT SUM(s.score*c.credit) from (score s INNER JOIN course c ON s.course_id = c.id)INNER JOIN `user` u
+        ON u.sno = s.sno where u.sno = #{sno};
+    </select>
+
+</mapper>

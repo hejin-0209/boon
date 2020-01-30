@@ -3,8 +3,8 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://39.108.98.95:3306/boon?characterEncoding=utf-8
-    name: root
+    url: jdbc:mysql://localhost:3306/boon?characterEncoding=utf-8
+    username: root
     password: root
   application:
     name: user
@@ -12,7 +12,7 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 
-  #下面配置服务的Eureka的地址
+  #涓嬮潰閰嶇疆鏈嶅姟鐨凟ureka鍦板潃
 eureka:
   client:
     service-url:

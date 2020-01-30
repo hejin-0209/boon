@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boon.reward_and_punishment.mapper.HealthMapper">
+    <resultMap id="health" type="com.boon.pojo.Health">
+        <id property="sno" column="sno"/>
+        <result property="physique" column="physique"/>
+        <result property="hygiene" column="hygiene"/>
+        <result property="exercise" column="exercise"/>
+        <result property="labour" column="labour"/>
+        <result property="rewardsSno" column="rewards_sno"/>
+        <result property="proportion" column="proportion"/>
+    </resultMap>
+
+    <insert id="addHealth" parameterType="com.boon.pojo.Health">
+        insert into health values (#{sno},#{physique},#{hygiene},#{exercise},#{labour},#{rewardsSno},#{proportion})
+    </insert>
+
+    <update id="update">
+        update health
+        <set>
+            <if test="physique != null">
+                physique = #{physique},
+            </if>
+            <if test="hygiene != null">
+                hygiene = #{hygiene},
+            </if>
+            <if test="exercise != null">
+                exercise = #{exercise},
+            </if>
+            <if test="labour != null">
+                labour = #{labour},
+            </if>
+            <if test="rewardsSno != null and rewardsSno != ''">
+                rewards_sno = #{rewardsSno},
+            </if>
+            <if test="proportion != null">
+                proportion = #{proportion},
+            </if>
+        </set>
+        where sno = #{sno}
+    </update>
+
+    <select id="findBySno" resultMap="health">
+        select * from health where sno = #{sno}
+    </select>
+
+    <select id="convert" resultType="java.lang.Double">
+        SELECT (proportion*sum) AS `convert` FROM (SELECT DISTINCT proportion FROM health) AS c,
+        (SELECT sum1+sum2 AS sum FROM
+        (SELECT physique+hygiene+exercise+labour AS sum1 FROM health WHERE sno = #{sno}) AS a,
+        (SELECT final_value AS sum2 FROM rewards WHERE id =
+        (SELECT MAX(r.id) FROM rewards r INNER JOIN health h ON r.sno = h.sno WHERE h.sno=#{sno}
+         AND type_id = 1)) AS b) AS d;
+    </select>
+
+    <select id="findAll" resultMap="health">
+        select * from health
+    </select>
+
+
+</mapper>

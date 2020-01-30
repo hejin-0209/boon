@@ -19,5 +19,6 @@ public class Score implements Serializable {
   private String sno;       // 学生的学号
   private Integer courseId; // 课程的id  外键
   private Integer score;    // 成绩分数
+  private Integer del;      // 成绩的删除状态
 
 }

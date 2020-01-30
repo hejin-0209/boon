@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boon.reward_and_punishment.mapper.RewardMapper">
+    <resultMap id="rewards" type="com.boon.pojo.Rewards">
+        <id property="id" column="id"/>
+        <result property="sno" column="sno"/>
+        <result property="typeId" column="type_id"/>
+        <result property="initialValue" column="initial_value"/>
+        <result property="reward" column="reward"/>
+        <result property="punish" column="punish"/>
+        <result property="createTime" column="create_time"/>
+        <result property="description" column="description"/>
+        <result property="finalValue" column="final_value"/>
+    </resultMap>
+
+    <insert id="addReward" parameterType="com.boon.pojo.Rewards">
+        insert into rewards values (null,#{sno},#{typeId},#{initialValue},
+        #{reward},#{punish},now(),#{description},#{finalValue})
+    </insert>
+
+    <update id="update">
+        update rewards
+        <set>
+            <if test="sno != null and sno != ''">
+                sno = #{sno},
+            </if>
+            <if test="typeId != null">
+                type_id = #{typeId},
+            </if>
+            <if test="initialValue != null">
+                initial_value = #{initialValue},
+            </if>
+            <if test="reward != null">
+                reward = #{reward},
+            </if>
+            <if test="punish != null">
+                punish = #{punish},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="finalValue != null">
+                final_value = #{finalValue},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="findFinalValue" resultMap="rewards">
+        select * from rewards where id =
+        (select max(id) from rewards where sno = #{sno} and type_id = #{typeId});
+    </select>
+
+    <select id="findBySno" resultMap="rewards">
+        select * from rewards where sno = #{sno}
+    </select>
+
+    <select id="findByTypeId" resultMap="rewards">
+        select * from rewards where type_id = #{typeId}
+    </select>
+
+    <select id="findById" resultMap="rewards">
+        select * from rewards where id = #{id}
+    </select>
+    <select id="findAll" resultMap="rewards">
+        select * from rewards
+    </select>
+
+
+</mapper>

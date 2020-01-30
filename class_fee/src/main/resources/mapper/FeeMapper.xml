@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boon.class_fee.mapper.FeeMapper">
+    <resultMap id="Fee" type="com.boon.pojo.ClassFee">
+        <id property="id" column="id"/>
+        <result property="income" column="income"/>
+        <result property="expend" column="expend"/>
+        <result property="money" column="money"/>
+        <result property="operationTime" column="operation_time"/>
+        <result property="userSno" column="user_sno"/>
+        <result property="description" column="description"/>
+    </resultMap>
+
+    <insert id="addFee" parameterType="com.boon.pojo.ClassFee">
+        insert into class_fee values(null,#{income},#{expend},#{money},
+        #{userSno},#{operationTime},#{description})
+    </insert>
+
+    <update id="updateFee" >
+        update class_fee
+        <set>
+            <if test="income != ''">
+                income = #{income},
+            </if>
+            <if test="expend != ''">
+                expend = #{expend},
+            </if>
+            <if test="money != ''">
+                money = #{money},
+            </if>
+            <if test="userSno != '' and userSno != null">
+                user_sno = #{userSno},
+            </if>
+            <if test="operationTime != null">
+                operation_time = #{operationTime},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="findMoney" resultType="double">
+        SELECT money FROM class_fee WHERE id=(SELECT max(id) from class_fee)
+    </select>
+    <select id="findById" resultMap="Fee">
+        select * from class_fee where id = #{id}
+    </select>
+    <select id="findBySno" resultMap="Fee">
+        select * from class_fee where user_sno = #{sno}
+    </select>
+</mapper>

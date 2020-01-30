@@ -17,6 +17,9 @@
         <module name="admin_server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="other" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -24,6 +27,7 @@
       <module name="class_fee" options="" />
       <module name="eureka_server" options="" />
       <module name="inform" options="" />
+      <module name="other" options="" />
       <module name="pojo" options="" />
       <module name="reward_and_punishment" options="" />
       <module name="score" options="" />

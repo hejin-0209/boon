@@ -45,6 +45,12 @@
             <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
 
+        <!--导入pojo的包-->
+        <dependency>
+            <groupId>com.boon</groupId>
+            <artifactId>pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!--swagger2的依赖-->
         <dependency>
             <groupId>io.springfox</groupId>

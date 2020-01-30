@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boon.score.mapper.CourseMapper">
+
+    <insert id="addCourse" parameterType="com.boon.pojo.Course">
+        insert into course values (null,#{name},#{credit},#{del})
+    </insert>
+
+    <update id="update">
+        update course
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="credit != ''">
+                credit = #{credit},
+            </if>
+            <if test="del != ''">
+                del = #{del},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="findCourse" resultType="com.boon.pojo.Course">
+        select * from course where del != 1
+    </select>
+
+    <select id="findById" resultType="com.boon.pojo.Course">
+        select * from course where id = #{id} and del != 1
+    </select>
+</mapper>

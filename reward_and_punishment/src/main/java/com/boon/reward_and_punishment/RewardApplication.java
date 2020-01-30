@@ -5,13 +5,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
-@SpringBootApplication
+/**
+ * author:       HeJin
+ * Date:         2020/1/30
+ * version:      1.0
+ * Description:  关于这个类的描述
+ */
+@SpringBootApplication(scanBasePackageClasses = RewardApplication.class)
 @EnableFeignClients
 @EnableEurekaClient
-public class RewardAndPunishmentApplication {
+public class RewardApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RewardAndPunishmentApplication.class, args);
+        SpringApplication.run(RewardApplication.class,args);
     }
-
 }

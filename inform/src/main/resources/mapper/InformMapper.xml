@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.boon.inform.mapper.InformMapper">
+    <resultMap id="inform" type="com.boon.pojo.Inform">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="createTime" column="create_time"/>
+        <result property="userSno" column="user_sno"/>
+        <result property="del" column="del"/>
+    </resultMap>
+    <insert id="addInform" parameterType="com.boon.pojo.Inform">
+        insert into inform values(null,#{title},#{content},#{createTime},#{userSno},#{del})
+    </insert>
+
+    <update id="update">
+        update inform
+        <set>
+            <if test="title != '' and title != null">
+                title = #{title},
+            </if>
+            <if test="content != '' and content != null">
+                content = #{content},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="userSno != '' and userSno != null">
+                user_sno = #{userSno},
+            </if>
+            <if test="del != '' and del != null">
+                del = #{del},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="findById" resultMap="inform">
+        select * from inform where del != 1 and id = #{id}
+    </select>
+
+    <select id="findAll" resultMap="inform">
+        select * from inform where del != 1
+    </select>
+
+    <select id="findBySno" resultMap="inform">
+        select * from inform where del != 1 and user_sno = #{userSno};
+    </select>
+
+
+</mapper>

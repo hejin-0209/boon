@@ -20,7 +20,7 @@ public class Moral implements Serializable {
   private Integer learn;       // 学习态度
   private Integer culture;     // 文明礼貌
   private Integer discipline;  // 纪律观念
-  private Integer rewardsSno;  // 奖惩中的学号
+  private String rewardsSno;  // 奖惩中的学号
   private double proportion;   // 思想品德表在综测中的占比
 
 }
