@@ -11,7 +11,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
  * version:      1.0
  * Description:  关于这个类的描述
  */
-@SpringBootApplication(scanBasePackageClasses = RewardApplication.class)
+@SpringBootApplication
 @EnableFeignClients
 @EnableEurekaClient
 public class RewardApplication {

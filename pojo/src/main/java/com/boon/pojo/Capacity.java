@@ -17,7 +17,7 @@ public class Capacity implements Serializable {
 
   private String sno;           // 学号作为个人能力表的主键
   private Integer basic;        // 个人能力表的基本值
-  private Integer rewardsSno;   // 个人能力表的奖惩外键
+  private String rewardsSno;   // 个人能力表的奖惩外键
   private double proportion;    // 个人能力表在综测中所占的比例
 
 }

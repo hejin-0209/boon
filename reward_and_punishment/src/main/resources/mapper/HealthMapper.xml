@@ -51,7 +51,7 @@
         (SELECT physique+hygiene+exercise+labour AS sum1 FROM health WHERE sno = #{sno}) AS a,
         (SELECT final_value AS sum2 FROM rewards WHERE id =
         (SELECT MAX(r.id) FROM rewards r INNER JOIN health h ON r.sno = h.sno WHERE h.sno=#{sno}
-         AND type_id = 1)) AS b) AS d;
+         AND type_id = 2)) AS b) AS d;
     </select>
 
     <select id="findAll" resultMap="health">

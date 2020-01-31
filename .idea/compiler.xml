@@ -14,15 +14,17 @@
         <module name="zuul_server" />
         <module name="class_fee" />
         <module name="score" />
-        <module name="admin_server" />
+        <module name="admin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin_server" target="1.8" />
       <module name="other" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="" />
       <module name="admin_server" options="" />
       <module name="class_fee" options="" />
       <module name="eureka_server" options="" />

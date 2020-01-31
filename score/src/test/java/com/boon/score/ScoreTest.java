@@ -78,4 +78,17 @@ public class ScoreTest {
         Integer totalBySno = scoreMapper.findTotalBySno("2016901147");
         System.out.println(totalBySno);
     }
+
+    //计算加权成绩
+    @Test
+    public void weightedScore(){
+        Double weighted = weighted("2016901133");
+        System.out.println(weighted);
+    }
+
+    public Double weighted(String sno){
+        Integer total = scoreService.findTotalBySno(sno);
+        Integer credit = scoreService.findLearnCreditBySno(sno);
+        return (double)total/credit;
+    }
 }

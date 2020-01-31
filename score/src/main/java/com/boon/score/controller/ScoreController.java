@@ -1,6 +1,9 @@
 package com.boon.score.controller;
 
 import com.boon.pojo.Score;
+import com.boon.reward_and_punishment.service.CapacityService;
+import com.boon.reward_and_punishment.service.HealthService;
+import com.boon.reward_and_punishment.service.MoralService;
 import com.boon.score.service.ScoreService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -82,5 +85,30 @@ public class ScoreController {
     public Integer findTotalBySno(@PathVariable String sno){
         return scoreService.findTotalBySno(sno);
     }
+
+    // 计算加权成绩
+    @PostMapping("weightedScore/{sno}")
+    @ApiOperation(value = "计算个人的加权成绩（总学分绩除以总学分）" , notes = "需要提供学号")
+    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
+            required = true ,dataType = "String")
+    public Double weightedScore(@PathVariable String sno){
+        Integer total = scoreService.findTotalBySno(sno);
+        Integer credit = scoreService.findLearnCreditBySno(sno);
+        return (double)total/credit;
+    }
+
+//    // 计算综测
+//    @PostMapping("comprehensive/{sno}")
+//    @ApiOperation(value = "计算个人的综测（学习成绩（60%）+思想品德（20%）+卫生体育（10%）+个人能力（10%））" , notes = "需要提供学号")
+//    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
+//            required = true ,dataType = "String")
+//    public Double comprehensive(@PathVariable String sno){
+//        Double weightedScore = weightedScore(sno);
+//        Double moralConvert = moralService.convert(sno);
+//        Double healthConvert = healthService.convert(sno);
+//        Double capacityConvert = capacityService.convert(sno);
+//        double comprehensive = weightedScore * 0.6 + moralConvert + healthConvert + capacityConvert;
+//        return comprehensive;
+//    }
 
 }
