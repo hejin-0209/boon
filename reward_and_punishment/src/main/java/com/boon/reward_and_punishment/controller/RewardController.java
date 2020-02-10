@@ -33,7 +33,7 @@ public class RewardController {
     }
 
     // 查询某位同学的最后一次奖惩情况
-    @PostMapping("findFinalReward/{sno}/{typeId}")
+    @GetMapping("findFinalReward/{sno}/{typeId}")
     @ApiOperation(value = "查询某位同学的最后一次奖惩情况" ,notes = "需要提供者为同学的学号和需要查询的奖惩类型")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
@@ -46,7 +46,7 @@ public class RewardController {
     }
 
     // 查询一位同学的奖惩情况
-    @PostMapping("findBySno/{sno}")
+    @GetMapping("findBySno/{sno}")
     @ApiOperation(value = "查询一位同学的奖惩情况" ,notes = "需要提供学生的学号")
     @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
             required = true ,dataType = "string")
@@ -55,7 +55,7 @@ public class RewardController {
     }
 
     // 查询某一类型的所有的奖惩情况
-    @PostMapping("findByTypeId/{typeId}")
+    @GetMapping("findByTypeId/{typeId}")
     @ApiOperation(value = "查询某一类型的所有的奖惩情况" , notes = "需要提供类型的id")
     @ApiImplicitParam(paramType = "path" , name = "typeId" ,value = "类型的id",
             required = true ,dataType = "int")
@@ -71,7 +71,7 @@ public class RewardController {
     }
 
     // 根据id查找奖惩情况
-    @PostMapping("findById/{id}")
+    @GetMapping("findById/{id}")
     @ApiOperation(value = "根据id查找奖惩情况" ,notes = "需要提供奖惩的id")
     @ApiImplicitParam(paramType = "path" , name = "id" ,value = "奖惩的id",
             required = true ,dataType = "int")

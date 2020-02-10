@@ -17,7 +17,7 @@ import java.util.List;
  * Description:  通知的控制层
  */
 @RestController
-@RequestMapping("Inform")
+@RequestMapping("inform")
 @Api(value = "通知的接口")
 public class InformController {
 
@@ -32,7 +32,7 @@ public class InformController {
     }
 
     // 通过id查询通知
-    @PostMapping("findById/{id}")
+    @GetMapping("findById/{id}")
     @ApiOperation(value = "根据id查找一个通知" , notes = "需要提供一个通知的id")
     @ApiImplicitParam(paramType = "path" , name = "id" ,value = "通知的id",
             required = true ,dataType = "int")
@@ -48,7 +48,7 @@ public class InformController {
     }
 
     // 通过管理员的学号来查询通知
-    @PostMapping("findBySno/{userSno}")
+    @GetMapping("findBySno/{userSno}")
     @ApiOperation(value = "通过管理员的学号来查询id" ,notes = "需要提供管理员的学号")
     @ApiImplicitParam(paramType = "path" , name = "userSno" ,value = "管理员的学号",
             required = true ,dataType = "String")

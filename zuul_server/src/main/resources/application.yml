@@ -18,7 +18,7 @@ zuul:
   ignored-services:
     "*"
   routes:
-    class-fee: /class-fee-proxy/**
+    class-fee: /fee-proxy/**
     inform: /inform-proxy/**
     reward-and-punishment: /reward-proxy/**
     score: /score-proxy/**

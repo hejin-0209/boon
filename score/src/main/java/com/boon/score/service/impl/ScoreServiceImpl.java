@@ -26,8 +26,8 @@ public class ScoreServiceImpl implements ScoreService {
     }
 
     @Override
-    public List<Score> findScore() {
-        return scoreMapper.findScore();
+    public List<Score> findAll() {
+        return scoreMapper.findAll();
     }
 
     @Override

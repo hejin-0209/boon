@@ -22,6 +22,7 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public boolean addCourse(Course course) {
+        course.setDel(0);
         return courseMapper.addCourse(course);
     }
 

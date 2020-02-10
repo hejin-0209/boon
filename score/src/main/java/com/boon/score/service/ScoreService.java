@@ -14,7 +14,7 @@ public interface ScoreService {
 
     boolean addScore(Score score);
 
-    List<Score> findScore();
+    List<Score> findAll();
 
     List<Score> findBySno(String sno);
 

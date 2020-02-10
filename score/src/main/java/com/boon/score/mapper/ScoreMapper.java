@@ -15,7 +15,7 @@ import java.util.List;
 public interface ScoreMapper {
     boolean addScore(Score score);
 
-    List<Score> findScore();
+    List<Score> findAll();
 
     List<Score> findBySno(String sno);
 

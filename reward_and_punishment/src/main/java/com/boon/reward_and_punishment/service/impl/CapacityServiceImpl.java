@@ -24,7 +24,7 @@ public class CapacityServiceImpl implements CapacityService {
     public boolean addCapacity(Capacity capacity) {
         if(capacity != null){
             // 当Capacity不为空，个人能力的基础值是60
-            if (capacity.getBasic() == null){
+            if (capacity.getBasic() == null || capacity.getBasic() == 0){
                 capacity.setBasic(60);
             }
         }

@@ -15,7 +15,7 @@
         insert into score values(null,#{sno},#{courseId},#{score},0)
     </insert>
 
-    <select id="findScore" resultMap="score">
+    <select id="findAll" resultMap="score">
         select * from score where del != 1
     </select>
 

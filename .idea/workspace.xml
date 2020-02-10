@@ -2,34 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a16f17-612f-4833-9c4a-fc73e60e5f26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/FastClientImporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/CapacityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/CapacityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/CapacityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/CapacityMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/CapacityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CapacityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CourseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/FeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/HealthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/InformController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/MoralController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/RewardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/ScoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/TypeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICapacityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICourseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IFeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IHealthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IInformService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IMoralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IRewardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IScoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ITypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/AdminTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_server/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_server/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_server/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_server/src/main/java/com/boon/admin_server/AdminServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_server/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Capacity.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Capacity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Capacity.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Capacity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/RewardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/RewardApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/HealthMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/HealthMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/score/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/controller/FeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/controller/FeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/controller/InformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/controller/InformController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/CapacityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/CapacityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/HealthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/HealthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/MoralController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/MoralController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/RewardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/RewardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/TypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/mapper/ScoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/mapper/ScoreMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/ScoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/CourseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score/src/main/resources/mapper/ScoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/resources/mapper/ScoreMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul_server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul_server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/eureka_server/target/" />
@@ -82,6 +95,13 @@
         <item name="boon" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="boon: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="capacity: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="boon" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="boon: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="comprehensive: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -94,7 +114,57 @@
     <favorites_list name="boon" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/TypeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/score/src/main/resources/mapper/CourseMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="65" lean-forward="true" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/score/src/test/java/com/boon/score/CourseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/CourseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+              <folding>
+                <element signature="e#796#797#0" expanded="true" />
+                <element signature="e#850#851#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/CourseServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -113,15 +183,26 @@
       <find>moralService</find>
       <find>Moral</find>
       <find>Health</find>
+      <find>IHealthService</find>
+      <find>IMoralService</find>
+      <find>IRewardService</find>
+      <find>IScoreService</find>
+      <find>ITypeService</find>
+      <find>IUserService</find>
     </findStrings>
     <replaceStrings>
       <replace>卫生体育</replace>
       <replace>health</replace>
       <replace>Health</replace>
-      <replace>healthService</replace>
       <replace>个人能力</replace>
       <replace>capacity</replace>
       <replace>Capacity</replace>
+      <replace>healthService</replace>
+      <replace>moralService</replace>
+      <replace>rewardService</replace>
+      <replace>scoreService</replace>
+      <replace>typeService</replace>
+      <replace>userService</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -138,6 +219,7 @@
     <setting file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/service/impl/FeeServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/FeeController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/RewardTest.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/CourseServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/inform/src/test/java/com/boon/inform/InformTest.java" root0="SKIP_INSPECTION" />
@@ -153,57 +235,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Health.java" />
-        <option value="$PROJECT_DIR$/other/pom.xml" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/service/impl/HealthServiceImpl.java" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/config/Swagger2.java" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/controller/HealthController.java" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/controller/MoralController.java" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/service/impl/MoralServiceImpl.java" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/controller/RewardController.java" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/service/impl/RewardServiceImpl.java" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/controller/TypeController.java" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/service/impl/TypeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/other/src/main/java/com/boon/other/OtherApplication.java" />
-        <option value="$PROJECT_DIR$/other/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/other/src/test/java/com/boon/other/HealthTest.java" />
-        <option value="$PROJECT_DIR$/other/src/test/java/com/boon/other/MoralTest.java" />
-        <option value="$PROJECT_DIR$/other/src/test/java/com/boon/other/RewardTest.java" />
-        <option value="$PROJECT_DIR$/other/src/test/java/com/boon/other/TypeTest.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/MoralTest.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/TypeTest.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/RewardTest.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/MoralController.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/MoralMapper.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/MoralServiceImpl.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/MoralMapper.xml" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/HealthMapper.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/HealthService.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/HealthController.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/HealthServiceImpl.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/HealthTest.java" />
-        <option value="$PROJECT_DIR$/zuul_server/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/pom.xml" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/RewardApplication.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/CapationTest.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/CapacityController.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/CapacityMapper.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/CapacityService.java" />
-        <option value="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Capacity.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/HealthMapper.xml" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/CapacityTest.java" />
-        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/CapacityMapper.xml" />
-        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/ScoreService.java" />
-        <option value="$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java" />
-        <option value="$PROJECT_DIR$/admin_server/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/admin/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/admin/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/AdminApplication.java" />
         <option value="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/AdminApplicationTests.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/FastClientImporter.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/AppConfig.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/FeeService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/InformService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/HealthService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/CourseService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/UserService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/CapacityService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICapacityService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICourseService.java" />
+        <option value="$PROJECT_DIR$/zuul_server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IFeeService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IHealthService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IInformService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IMoralService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IRewardService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ITypeService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IUserService.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/ScoreService.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/mapper/ScoreMapper.java" />
+        <option value="$PROJECT_DIR$/score/src/main/resources/mapper/ScoreMapper.xml" />
+        <option value="$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IScoreService.java" />
+        <option value="$PROJECT_DIR$/admin/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/Test.java" />
+        <option value="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/AdminTest.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/controller/FeeController.java" />
+        <option value="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/controller/InformController.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/CapacityController.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/HealthController.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/MoralController.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/RewardController.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/CourseController.java" />
         <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CapacityController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CourseController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/FeeController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/HealthController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/InformController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/MoralController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/RewardController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/ScoreController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/TypeController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/TypeController.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/CourseServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -226,23 +308,19 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="inform" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="admin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="reward_and_punishment" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="reward_and_punishment" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="admin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1087" />
   </component>
@@ -254,6 +332,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -265,34 +344,114 @@
             <path>
               <item name="boon" type="b2602c69:ProjectViewProjectNode" />
               <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boon" type="b2602c69:ProjectViewProjectNode" />
               <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boon" type="b2602c69:ProjectViewProjectNode" />
               <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boon" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boon" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boon" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boon" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boon" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boon" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boon" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boon" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boon" type="b2602c69:ProjectViewProjectNode" />
               <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boon" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="score" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -307,7 +466,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -324,18 +483,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.boon.admin.controller" />
+      <recent name="com.boon.admin.service" />
       <recent name="com.boon.reward" />
       <recent name="com.boon.reward_and_punishment.service" />
       <recent name="com.boon.reward_and_punishment.service.impl" />
-      <recent name="com.boon.reward_and_punishment.mapper" />
-      <recent name="com.boon.reward_and_punishment.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git_repository\boon\admin\src\main\java\com\boon\admin\controller" />
+      <recent name="D:\git_repository\boon\admin\src\main\java\com\boon\admin\service" />
       <recent name="D:\git_repository\boon\admin\src\main\java\com\boon\admin\confing" />
       <recent name="D:\git_repository\boon\reward_and_punishment\src\main\resources\mapper" />
       <recent name="D:\git_repository\boon\other\src\test\java\com\boon\other" />
-      <recent name="D:\git_repository\boon\other\src\main\resources" />
-      <recent name="D:\git_repository\boon\other\src\main\java\com\boon\other" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -356,18 +515,18 @@
     </option>
     <option name="contentProportion" value="0.17177244" />
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminApplication">
-    <configuration name="CapacityTest.addCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="reward_and_punishment" />
+  <component name="RunManager" selected="JUnit.AdminTest.test1">
+    <configuration name="AdminTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="admin" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.boon.reward.*" />
+          <option name="PATTERN" value="com.boon.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.boon.reward" />
-      <option name="MAIN_CLASS_NAME" value="com.boon.reward.CapacityTest" />
-      <option name="METHOD_NAME" value="addCapacity" />
+      <option name="PACKAGE_NAME" value="com.boon.admin" />
+      <option name="MAIN_CLASS_NAME" value="com.boon.admin.AdminTest" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -495,11 +654,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AdminTest.test1" />
         <item itemvalue="JUnit.ScoreTest.weightedScore" />
         <item itemvalue="JUnit.ScoreTest.weighted" />
         <item itemvalue="JUnit.CapacityTest.convert" />
         <item itemvalue="JUnit.CapacityTest.findBySno" />
-        <item itemvalue="JUnit.CapacityTest.addCapacity" />
       </list>
     </recent_temporary>
   </component>
@@ -534,7 +693,11 @@
       <workItem from="1580310346581" duration="1954000" />
       <workItem from="1580355392080" duration="15468000" />
       <workItem from="1580375872406" duration="35000" />
-      <workItem from="1580444634886" duration="3197000" />
+      <workItem from="1580444634886" duration="12485000" />
+      <workItem from="1580534781380" duration="153000" />
+      <workItem from="1580741441622" duration="1577000" />
+      <workItem from="1581237276115" duration="724000" />
+      <workItem from="1581322971778" duration="687000" />
     </task>
     <task id="LOCAL-00001" summary="添加了实体类，将微服务架构搭了起来">
       <created>1577086209989</created>
@@ -550,19 +713,24 @@
       <option name="project" value="LOCAL" />
       <updated>1580357921749</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="加了管理员服务">
+      <created>1580449771714</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580449771714</updated>
+    </task>
+    <task id="LOCAL-00004" summary="加了管理员服务">
+      <created>1580449818161</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580449818161</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CapacityTest_convert - 2020.01.30 at 15h 00m 29s.xml">
-      <configuration name="CapacityTest.convert" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CapacityTest_convert - 2020.01.30 at 15h 01m 24s.xml">
-      <configuration name="CapacityTest.convert" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ScoreTest_weightedScore - 2020.01.30 at 15h 36m 12s.xml">
-      <configuration name="ScoreTest.weightedScore" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ScoreTest_weightedScore - 2020.01.30 at 15h 37m 38s.xml">
       <configuration name="ScoreTest.weightedScore" configurationId="JUnit" />
     </history-entry>
@@ -584,9 +752,18 @@
     <history-entry file="ScoreTest_weightedScore - 2020.01.30 at 16h 40m 32s.xml">
       <configuration name="ScoreTest.weightedScore" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AdminTest_test1 - 2020.01.31 at 15h 44m 16s.xml">
+      <configuration name="AdminTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdminTest_test1 - 2020.01.31 at 15h 44m 59s.xml">
+      <configuration name="AdminTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AdminTest_test1 - 2020.01.31 at 15h 45m 36s.xml">
+      <configuration name="AdminTest.test1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160459000" />
+    <option name="totallyTimeSpent" value="172888000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -598,9 +775,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1087" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.53547674" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.19635193" />
       <window_info id="Structure" order="1" sideWeight="0.50073636" side_tool="true" weight="0.1502146" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -610,7 +788,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3755319" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19361702" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -619,18 +797,18 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.28404257" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3787234" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32978722" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.35338345" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.14468086" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.22659574" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.15504292" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.058476396" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.13968958" />
+      <window_info anchor="right" id="Database" order="6" weight="0.18991417" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -642,315 +820,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加了实体类，将微服务架构搭了起来" />
     <MESSAGE value="加了好多功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="加了好多功能" />
+    <MESSAGE value="加了管理员服务" />
+    <option name="LAST_COMMIT_MESSAGE" value="加了管理员服务" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/other/src/main/java/com/boon/other/mapper/TypeMapper.java" />
-    <entry file="file://$PROJECT_DIR$/other/src/main/java/com/boon/other/service/impl/TypeServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/other/src/main/java/com/boon/other/service/TypeService.java" />
-    <entry file="file://$PROJECT_DIR$/other/src/main/resources/application.yml" />
-    <entry file="file://$PROJECT_DIR$/other/src/test/java/com/boon/other/HealthTest.java" />
-    <entry file="file://$PROJECT_DIR$/other/src/test/java/com/boon/other/RewardTest.java" />
-    <entry file="file://$PROJECT_DIR$/other/src/test/java/com/boon/other/TypeTest.java" />
-    <entry file="file://$PROJECT_DIR$/other/src/main/java/com/boon/other/OtherApplication.java" />
-    <entry file="file://$PROJECT_DIR$/other/src/test/java/com/boon/other/MoralTest.java" />
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/RewardAndPunishmentApplication.java" />
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/TypeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/RewardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/MoralServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1649#1650#0" expanded="true" />
-            <element signature="e#1693#1694#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/RewardMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/MoralMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/MoralTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/MoralController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/MoralMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/RewardApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/HealthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="63" column="5" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/HealthMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/HealthService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/CapacityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Capacity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="20" column="49" lean-forward="true" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/HealthMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/HealthServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/HealthTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="66" column="5" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="66" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/CapacityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/CapacityMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/CapacityMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/CapacityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/com/netflix/eureka/eureka-client/1.4.11/eureka-client-1.4.11-sources.jar!/com/netflix/discovery/InstanceInfoReplicator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="103" column="32" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/score/src/main/resources/mapper/ScoreMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="90" column="64" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_server/src/main/java/com/boon/admin_server/AdminServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class_fee/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class_fee/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/test/java/com/boon/admin/AdminApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="103" column="28" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/AdminApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -972,34 +849,384 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/ScoreService.java">
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="374">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        <state relative-caret-position="178">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul_server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICapacityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICourseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/CourseController.java">
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IFeeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="34" column="27" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="27" />
+        <state relative-caret-position="396">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IHealthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="24" column="57" lean-forward="true" selection-start-line="24" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IInformService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IMoralService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IRewardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zuul_server/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ITypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/ScoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/mapper/ScoreMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/main/resources/mapper/ScoreMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IScoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="81" column="21" lean-forward="true" selection-start-line="71" selection-start-column="8" selection-end-line="81" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/test/java/com/boon/admin/AdminTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/CapacityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/controller/FeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="57" column="15" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/HealthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inform/src/main/java/com/boon/inform/controller/InformController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="50" column="15" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/CapacityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/RewardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="73" column="15" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/MoralController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="89" column="15" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="58" column="33" lean-forward="true" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CapacityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/FeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/HealthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/InformController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/MoralController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/RewardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/ScoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="65" column="15" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/TypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="23" />
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/TypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/main/resources/mapper/CourseMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="65" lean-forward="true" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/test/java/com/boon/score/CourseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/CourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/CourseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
         </state>
       </provider>
     </entry>

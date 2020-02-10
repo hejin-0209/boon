@@ -38,8 +38,8 @@ public class ScoreTest {
     }
 
     @Test
-    public void findScore(){
-        List<Score> scores = scoreService.findScore();
+    public void findAll(){
+        List<Score> scores = scoreService.findAll();
         for (Score score : scores) {
             System.out.println(score);
         }

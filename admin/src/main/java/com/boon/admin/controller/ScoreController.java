@@ -1,13 +1,7 @@
-package com.boon.score.controller;
+package com.boon.admin.controller;
 
+import com.boon.admin.service.IScoreService;
 import com.boon.pojo.Score;
-import com.boon.reward_and_punishment.service.CapacityService;
-import com.boon.reward_and_punishment.service.HealthService;
-import com.boon.reward_and_punishment.service.MoralService;
-import com.boon.score.service.ScoreService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,76 +15,55 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("score")
-@Api(value = "成绩的接口")
 public class ScoreController {
 
     @Autowired
-    private ScoreService scoreService;
+    private IScoreService scoreService;
 
     //成绩的添加
     @PostMapping("addScore")
-    @ApiOperation(value = "成绩的添加" ,notes = "成绩需要管理员从后台输入")
     public boolean addScore(Score score){
         return scoreService.addScore(score);
     }
 
     //成绩的全查
     @GetMapping("findAll")
-    @ApiOperation(value = "查询所有的成绩")
     public List<Score> findAll(){
         return scoreService.findAll();
     }
 
     //根据学号来查询成绩
     @GetMapping("findBySno/{sno}")
-    @ApiOperation(value = "根据学号来查询成绩" ,notes = "需要提供学号")
-    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
-            required = true ,dataType = "String")
     public List<Score> findBySno(@PathVariable String sno){
         return scoreService.findBySno(sno);
     }
 
     //根据课程号来查询成绩
     @GetMapping("findByCourseId/{courseId}")
-    @ApiOperation(value = "根据课程号来查询成绩", notes = "需要提供课程号")
-    @ApiImplicitParam(paramType = "path" , name = "courseId" ,value = "课程号",
-            required = true ,dataType = "int")
     public List<Score> findByCourseId(@PathVariable int courseId){
         return scoreService.findByCourseId(courseId);
     }
 
     //计算个人所通过的学分(需要输入学号)
     @GetMapping("findCreditBySno/{sno}")
-    @ApiOperation(value = "计算个人所通过的学分" ,notes = "需要提供学号")
-    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
-            required = true ,dataType = "String")
     public Integer findCreditBySno(@PathVariable String sno){
         return scoreService.findCreditBySno(sno);
     }
 
     //计算个人所修的学分(需要输入学号)
     @GetMapping("findLearnCreditBySno/{sno}")
-    @ApiOperation(value = "计算个人所修的学分" , notes = "需要提供学号")
-    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
-            required = true ,dataType = "String")
     public Integer findLearnCreditBySno(@PathVariable String sno){
         return scoreService.findLearnCreditBySno(sno);
     }
 
     //计算个人所得的总学分绩（学分乘于分数的总和，需要输入学号）
     @GetMapping("findTotalBySno/{sno}")
-    @ApiOperation(value = "计算个人所得的总学分绩（学分乘于分数的总和）" , notes = "需要提供学号")
-    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
-            required = true ,dataType = "String")
     public Integer findTotalBySno(@PathVariable String sno){
         return scoreService.findTotalBySno(sno);
     }
 
     // 计算加权成绩
     @GetMapping("weightedScore/{sno}")
-    @ApiOperation(value = "计算个人的加权成绩（总学分绩除以总学分）" , notes = "需要提供学号")
-    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
-            required = true ,dataType = "String")
     public Double weightedScore(@PathVariable String sno){
         Integer total = scoreService.findTotalBySno(sno);
         Integer credit = scoreService.findLearnCreditBySno(sno);
