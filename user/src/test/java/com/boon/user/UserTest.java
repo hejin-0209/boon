@@ -1,6 +1,7 @@
 package com.boon.user;
 
 import com.boon.pojo.User;
+import com.boon.user.controller.UserController;
 import com.boon.user.mapper.UserMapper;
 import com.boon.user.service.UserService;
 import org.junit.Test;
@@ -20,6 +21,10 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserTest {
+
+    @Autowired
+    private UserController userController;
+
     @Autowired
     private UserMapper userMapper;
     @Autowired
@@ -34,12 +39,20 @@ public class UserTest {
         }
     }
 
+    @Test
+    public void findAll1(){
+        List<User> users = userController.findAll();
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+
     /*增加用户*/
     @Test
     public void addUser(){
         User user = new User();
-        user.setSno("2016901135");
-        user.setName("易俊涛");
+        user.setSno("2016901136");
+        user.setName("张乘瑞");
         user.setPassword(user.getSno().substring(4));
         boolean b = userMapper.addUser(user);
         if(b){
@@ -85,5 +98,10 @@ public class UserTest {
         System.out.println(b);
     }
 
-
+    /*查询用户数量*/
+    @Test
+    public void findCount(){
+        Integer count = userService.findCount();
+        System.out.println(count);
+    }
 }

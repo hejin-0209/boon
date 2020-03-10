@@ -22,5 +22,9 @@ public class Health implements Serializable {
   private Integer labour;     // 劳动情况
   private String rewardsSno; // 奖惩中的学号
   private double proportion;  // 卫生体育表在综测中的占比
+  private Integer del;             // 删除状态
+
+  private String userName;         // 扩展字段用户名
+  private Integer finalRewards;    // 扩展字段，最后的奖惩分
 
 }

@@ -1,7 +1,9 @@
 package com.boon.admin.controller;
 
 import com.boon.admin.service.IHealthService;
+import com.boon.admin.service.IRewardService;
 import com.boon.pojo.Health;
+import com.boon.pojo.Rewards;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +21,9 @@ public class HealthController {
 
     @Autowired
     private IHealthService healthService;
+
+    @Autowired
+    private IRewardService rewardService;
 
     // 新增卫生体育
     @PostMapping("addHealth")
@@ -45,10 +50,41 @@ public class HealthController {
     }
 
     // 查询所有的卫生体育
-    @GetMapping("findAll")
-    public List<Health> findAll(){
-        return healthService.findAll();
+    @GetMapping("findHealth/{sno}")
+    public List<Health> findHealth(@PathVariable(value = "sno") String sno){
+        List<Health> healths = healthService.findHealth(sno);
+        for (Health health : healths) {
+            Rewards finalValue = rewardService.findFinalValue(health.getSno(), 7);
+            if (finalValue == null){
+                health.setFinalRewards(0);
+            }else{
+                health.setFinalRewards(finalValue.getFinalValue());
+            }
+        }
+
+        return healths;
     }
 
+    // 删除卫生体育
+    @DeleteMapping("delete/{sno}")
+    public boolean delete(@PathVariable(value = "sno") String sno){
+        return healthService.delete(sno);
+    }
+
+    // 批量删除
+    @DeleteMapping("delBatch/{snos}")
+    public boolean delBatch(@PathVariable(value = "snos") String[] snos){
+        int i = 0;
+        for (String sno : snos) {
+            boolean b = healthService.delete(sno);
+            if(b){
+                i++;
+            }
+        }
+        if(i == snos.length){
+            return true;
+        }
+        return false;
+    }
 
 }

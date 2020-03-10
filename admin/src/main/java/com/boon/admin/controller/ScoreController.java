@@ -22,7 +22,7 @@ public class ScoreController {
 
     //成绩的添加
     @PostMapping("addScore")
-    public boolean addScore(Score score){
+    public boolean addScore(@RequestBody Score score){
         return scoreService.addScore(score);
     }
 
@@ -68,6 +68,37 @@ public class ScoreController {
         Integer total = scoreService.findTotalBySno(sno);
         Integer credit = scoreService.findLearnCreditBySno(sno);
         return (double)total/credit;
+    }
+
+    // 成绩和课程的联合查询
+    @PostMapping("findScore/{sno}/{courseId}/{minScore}/{maxScore}")
+    public List<Score> findScore(@PathVariable(value = "sno") String sno, @PathVariable(value = "courseId") String courseId,
+                                 @PathVariable(value = "minScore") String minScore, @PathVariable(value = "maxScore") String maxScore) {
+        return scoreService.findScore(sno,courseId,minScore,maxScore);
+    }
+
+    // 批量删除
+    @PostMapping("delBatch/{ids}")
+    public boolean delBatch(@PathVariable(value = "ids")int[] ids){
+        return scoreService.delBatch(ids);
+    }
+
+    // 根据id查询成绩
+    @GetMapping("findById/{id}")
+    public Score findById(@PathVariable(value = "id") Integer id){
+        return scoreService.findById(id);
+    }
+
+    // 更新成绩
+    @PostMapping("update")
+    public boolean update(@RequestBody Score score){
+        return scoreService.update(score);
+    }
+
+    // 成绩删除
+    @DeleteMapping("delete/{id}")
+    public boolean delete(@PathVariable(value = "id") Integer id){
+        return scoreService.delete(id);
     }
 
 //    // 计算综测

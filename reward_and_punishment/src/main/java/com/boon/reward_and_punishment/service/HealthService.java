@@ -20,5 +20,7 @@ public interface HealthService {
 
     boolean update(Health health);
 
-    List<Health> findAll();
+    List<Health> findHealth(String sno);
+
+    boolean delete(String sno);
 }

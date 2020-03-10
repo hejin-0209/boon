@@ -60,7 +60,7 @@ public class CapacityTest {
 
     @Test
     public void findAll(){
-        List<Capacity> capacitys = capacityService.findAll();
+        List<Capacity> capacitys = capacityService.findCapacity(null);
         for (Capacity capacity : capacitys) {
             System.out.println(capacity);
         }

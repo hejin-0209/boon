@@ -31,8 +31,8 @@ public class TypeTest {
     @Test
     public void addType(){
         Type type = new Type();
-        type.setName("moral");
-        type.setAlias("思想品德");
+        type.setName("test");
+        type.setAlias("测试分类");
         type.setParentId(0);
         System.out.println(type);
         boolean b = typeService.addType(type);
@@ -55,7 +55,7 @@ public class TypeTest {
 
     @Test
     public void findParentId(){
-        List<Type> types = typeService.findParentId(2);
+        List<Type> types = typeService.findParentId(0);
         for (Type type : types) {
             System.out.println(type);
         }
@@ -74,4 +74,21 @@ public class TypeTest {
         boolean b = typeService.delete(10);
         System.out.println(b);
     }
+
+    @Test
+    public void test1() {
+        String str = "123";
+        int x = 0;
+        for (int i = str.length(); --i >= 0; ) {
+            if (Character.isDigit(str.charAt(i))) {
+                x++;
+            }
+        }
+        if(x == str.length()){
+            System.out.println("是数字");
+        }else{
+            System.out.println("是中文");
+        }
+    }
+
 }

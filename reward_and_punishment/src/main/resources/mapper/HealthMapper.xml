@@ -10,10 +10,12 @@
         <result property="labour" column="labour"/>
         <result property="rewardsSno" column="rewards_sno"/>
         <result property="proportion" column="proportion"/>
+        <result property="proportion" column="proportion"/>
+        <result property="userName" column="user_name"/>
     </resultMap>
 
     <insert id="addHealth" parameterType="com.boon.pojo.Health">
-        insert into health values (#{sno},#{physique},#{hygiene},#{exercise},#{labour},#{rewardsSno},#{proportion})
+        insert into health values (#{sno},#{physique},#{hygiene},#{exercise},#{labour},#{rewardsSno},#{proportion},0)
     </insert>
 
     <update id="update">
@@ -37,6 +39,9 @@
             <if test="proportion != null">
                 proportion = #{proportion},
             </if>
+            <if test="del != null">
+                del = #{del},
+            </if>
         </set>
         where sno = #{sno}
     </update>
@@ -54,8 +59,11 @@
          AND type_id = 2)) AS b) AS d;
     </select>
 
-    <select id="findAll" resultMap="health">
-        select * from health
+    <select id="findHealth" resultMap="health">
+        SELECT h.* , u.`name` user_name FROM health h INNER JOIN `user` u ON h.sno = u.sno WHERE h.del = 0 AND u.del = 0
+        <if test="sno != null and sno != ''">
+            and h.sno = #{sno}
+        </if>
     </select>
 
 

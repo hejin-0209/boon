@@ -1,12 +1,16 @@
 package com.boon.admin.service;
 
 import com.boon.pojo.Rewards;
+import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.annotation.security.PermitAll;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -23,7 +27,7 @@ public interface IRewardService {
      * @param rewards
      * @return
      */
-    @RequestMapping("boon/reward-proxy/reward/addReward")
+    @RequestMapping(value = "boon/reward-proxy/reward/addReward",method = RequestMethod.POST)
     boolean addReward(@RequestBody Rewards rewards);
 
     /**
@@ -32,7 +36,7 @@ public interface IRewardService {
      * @param typeId
      * @return
      */
-    @RequestMapping("boon/reward-proxy/reward/findFinalValue/{sno}/{typeId}")
+    @RequestMapping(value = "boon/reward-proxy/reward/findFinalValue/{sno}/{typeId}",method = RequestMethod.GET)
     Rewards findFinalValue(@PathVariable(value = "sno") String sno, @PathVariable(value = "typeId") Integer typeId);
 
     /**
@@ -40,7 +44,7 @@ public interface IRewardService {
      * @param sno
      * @return
      */
-    @RequestMapping("boon/reward-proxy/reward/findBySno/{sno}")
+    @RequestMapping(value = "boon/reward-proxy/reward/findBySno/{sno}",method = RequestMethod.GET)
     List<Rewards> findBySno(@PathVariable(value = "sno") String sno);
 
     /**
@@ -48,7 +52,7 @@ public interface IRewardService {
      * @param typeId
      * @return
      */
-    @RequestMapping("boon/reward-proxy/reward/findByTypeId/{typeId}")
+    @RequestMapping(value = "boon/reward-proxy/reward/findByTypeId/{typeId}",method = RequestMethod.GET)
     List<Rewards> findByTypeId(@PathVariable(value = "typeId") Integer typeId);
 
     /**
@@ -56,7 +60,7 @@ public interface IRewardService {
      * @param rewards
      * @return
      */
-    @RequestMapping("boon/reward-proxy/update/addReward")
+    @RequestMapping(value = "boon/reward-proxy/update/addReward",method = RequestMethod.POST)
     boolean update(@RequestBody Rewards rewards);
 
     /**
@@ -64,14 +68,15 @@ public interface IRewardService {
      * @param id
      * @return
      */
-    @RequestMapping("boon/reward-proxy/reward/findById/{id}")
+    @RequestMapping(value = "boon/reward-proxy/reward/findById/{id}",method = RequestMethod.GET)
     Rewards findById(@PathVariable(value = "id") Integer id);
 
     /**
      * 查询所有的奖惩情况
      * @return
      */
-    @RequestMapping("boon/reward-proxy/reward/findAll")
-    List<Rewards> findAll();
+    @RequestMapping(value = "boon/reward-proxy/reward/findRewards/{page}/{sno}/{typeId}/{startTime}/{endTime}",method = RequestMethod.GET)
+    PageInfo<Rewards> findRewards(@PathVariable(value = "page")String page , @PathVariable(value = "sno") String sno , @PathVariable(value = "typeId") String typeId,
+                                  @PathVariable(value = "startTime") String startTime , @PathVariable(value = "endTime") String endTime);
 
 }

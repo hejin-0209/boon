@@ -57,11 +57,21 @@ public class HealthController {
     }
 
     // 查询所有的卫生体育
-    @GetMapping("findAll")
-    @ApiOperation(value = "查询所有的卫生体育" , notes = "直接调用接口即可")
-    public List<Health> findAll(){
-        return healthService.findAll();
+    @GetMapping("findHealth/{sno}")
+    @ApiOperation(value = "查询所有的卫生体育" , notes = "条件查询需要输入学号")
+    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
+            required = true ,dataType = "string")
+    public List<Health> findHealth(@PathVariable(value = "sno") String sno){
+        if("null".equals(sno)){
+            sno = null;
+        }
+        return healthService.findHealth(sno);
     }
 
+    // 删除思想品德
+    @DeleteMapping("delete/{sno}")
+    public boolean delete(@PathVariable(value = "sno") String sno){
+        return healthService.delete(sno);
+    }
 
 }

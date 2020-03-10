@@ -1,7 +1,9 @@
 package com.boon.class_fee.service;
 
 import com.boon.pojo.ClassFee;
+import com.boon.pojo.Rewards;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -13,11 +15,13 @@ import java.util.List;
 public interface FeeService {
     boolean addFee(ClassFee fee);
 
-    double findMoney();
+    Double findMoney();
 
     boolean updateFee(ClassFee fee);
 
     ClassFee findById(int id);
 
     List<ClassFee> findBySno(String sno);
+
+    List<ClassFee> findFee(String sno, Timestamp startTime, Timestamp endTime);
 }

@@ -23,4 +23,6 @@ public interface TypeService {
     boolean update(Type type);
 
     boolean delete(Integer id);
+
+    boolean delBatch(int[] ids);
 }

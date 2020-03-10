@@ -30,4 +30,7 @@
     <select id="findById" resultType="com.boon.pojo.Course">
         select * from course where id = #{id} and del != 1
     </select>
+    <select id="findCount" resultType="java.lang.Integer">
+        select count(*) from course where del != 1
+    </select>
 </mapper>

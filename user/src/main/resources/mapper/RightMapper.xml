@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boon.user.mapper.RightMapper">
+
+    <resultMap id="right" type="com.boon.pojo.Right">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="url" column="url"/>
+        <result property="type" column="type"/>
+    </resultMap>
+    <select id="findAll" resultMap="right">
+        SELECT * from "right"
+    </select>
+    <select id="findRightByUserSno" resultType="java.lang.String">
+         SELECT sre.res_url FROM user_role ur LEFT JOIN user u ON u.sno = ur.user_sno
+             LEFT JOIN role r ON ur.role_id=r.id LEFT JOIN role_right rr ON ur.role_id = rr.role_id
+             LEFT JOIN "right" ri ON ri.id = rr.right_id
+             WHERE u.sno=#{userSno}
+    </select>
+
+
+</mapper>

@@ -11,6 +11,7 @@ import java.util.List;
  * Description:  课程的业务层
  */
 public interface CourseService {
+
     boolean addCourse(Course course);
 
     List<Course> findCourse();
@@ -20,4 +21,8 @@ public interface CourseService {
     boolean update(Course course);
 
     boolean delete(int id);
+
+    Integer findCount();
+
+    boolean delBatch(int[] ids);
 }

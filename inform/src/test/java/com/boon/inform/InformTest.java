@@ -52,7 +52,7 @@ public class InformTest {
 
     @Test
     public void findAll(){
-        List<Inform> informs = informService.findAll();
+        List<Inform> informs = informService.findAll("2016901147",null,null,null);
         for (Inform inform : informs) {
             System.out.println(inform);
         }
@@ -87,5 +87,10 @@ public class InformTest {
         System.out.println(b);
     }
 
+    @Test
+    public void findCount(){
+        Integer count = informService.findCount();
+        System.out.println(count);
+    }
 
 }

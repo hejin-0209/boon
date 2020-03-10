@@ -9,9 +9,10 @@
         <result property="createTime" column="create_time"/>
         <result property="userSno" column="user_sno"/>
         <result property="del" column="del"/>
+        <result property="userName" column="user_name"/>
     </resultMap>
     <insert id="addInform" parameterType="com.boon.pojo.Inform">
-        insert into inform values(null,#{title},#{content},#{createTime},#{userSno},#{del})
+        insert into inform values(null,#{title},#{content},now(),#{userSno},#{del})
     </insert>
 
     <update id="update">
@@ -41,11 +42,30 @@
     </select>
 
     <select id="findAll" resultMap="inform">
-        select * from inform where del != 1
+        SELECT i.* , u.`name` user_name from
+        inform i INNER JOIN `user` u ON i.user_sno = u.sno WHERE i.del = 0 and u.del = 0
+        <if test="name != null and name != ''">
+            and u.name = #{name}
+        </if>
+        <if test="sno != null and sno != ''">
+            and i.user_sno = #{sno}
+        </if>
+        <if test="title != null and title != ''">
+            and i.title LIKE CONCAT(CONCAT('%',#{title}),'%')   /*根据标题模糊查询，concat用于拼接字符创串*/
+        </if>
+        <if test="startTime != null">
+            and UNIX_TIMESTAMP(i.create_time) &gt; UNIX_TIMESTAMP(#{startTime})
+        </if>
+        <if test="endTime != null">
+            and UNIX_TIMESTAMP(i.create_time) &lt; UNIX_TIMESTAMP(#{endTime})
+        </if>
     </select>
 
     <select id="findBySno" resultMap="inform">
         select * from inform where del != 1 and user_sno = #{userSno};
+    </select>
+    <select id="findCount" resultType="java.lang.Integer">
+        select count(*) from inform where del != 1
     </select>
 
 

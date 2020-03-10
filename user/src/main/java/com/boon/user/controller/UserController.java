@@ -1,14 +1,18 @@
 package com.boon.user.controller;
 
 import com.boon.pojo.User;
+import com.boon.user.result.JsonResult;
+import com.boon.user.service.RoleService;
 import com.boon.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * author:       HeJin
@@ -24,6 +28,9 @@ public class  UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private RoleService roleService;
+
     /*全查*/
     @GetMapping("findAll")
     @ApiOperation(value = "全查所有的用户")
@@ -36,6 +43,8 @@ public class  UserController {
     @ApiOperation(value = "添加一个用户",notes = "用户的信息可由表导入，也可以在后台管理中输入")
     public boolean addUser(@RequestBody User user){
         System.out.println("需要增加的用户是:"+user);
+        user.setState(1);
+        user.setDel(0);
         return userService.addUser(user);
     }
 
@@ -66,4 +75,60 @@ public class  UserController {
 
         return userService.updateUser(user);
     }
+
+    /*查询用户数量*/
+    @GetMapping("findCount")
+    @ApiOperation(value = "查询用户数量",notes = "直接调用接口获取")
+    public Integer findCount(){
+        return userService.findCount();
+    }
+
+    /*修改用户状态*/
+    @PostMapping("changeState/{sno}")
+    public boolean changeState(@PathVariable(value = "sno") String sno){
+        return userService.changeState(sno);
+    }
+
+    /*批量删除数据*/
+    @DeleteMapping("delBatch/{snos}")
+    public boolean delBatch(@PathVariable String[] snos){
+        return userService.delBatch(snos);
+    }
+
+    /* 全查用户，分页 */
+    @GetMapping("findUser")
+    public JsonResult findUser(int page,int limit){
+        return userService.findUser(page,limit);
+    }
+
+    /* 查询已删除的用户 */
+    @GetMapping("findDelete")
+    public List<User> findDelete(){
+        return userService.findDelete();
+    }
+
+    /* 修改删除状态 */
+    @PostMapping("changeDel/{sno}")
+    public boolean changeDel(@PathVariable String sno){
+        return userService.changeDel(sno);
+    }
+
+    /* 批量恢复删除 */
+    @PostMapping("restoreBatch/{snos}")
+    public boolean restoreBatch(@PathVariable String[] snos){
+        return userService.restoreBatch(snos);
+    }
+
+    /* 查找权限 */
+    @PostMapping("findRightByUserSno")
+    public Set<String> findRightByUserSno(@RequestBody User user){
+        return userService.findRightByUserSno(user.getSno());
+    }
+
+    /* 查找角色 */
+    @PostMapping("findRoleNameByUserSno")
+    public Set<String> findRoleNameByUserSno(@RequestBody User user){
+        return roleService.findRoleNameByUserSno(user.getSno());
+    }
+
 }

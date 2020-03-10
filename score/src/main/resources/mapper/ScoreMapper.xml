@@ -11,9 +11,38 @@
         <result property="del" column="del"/>
     </resultMap>
 
+    <resultMap id="score1" type="com.boon.pojo.Score">
+        <id property="id" column="id"/>
+        <result property="sno" column="sno"/>
+        <result property="courseId" column="course_id"/>
+        <result property="score" column="score"/>
+        <result property="del" column="del"/>
+        <result property="courseName" column="course_name"/>
+        <result property="userName" column="user_name"/>
+    </resultMap>
+
     <insert id="addScore" parameterType="com.boon.pojo.Score">
         insert into score values(null,#{sno},#{courseId},#{score},0)
     </insert>
+
+    <update id="update">
+        update score
+        <set>
+            <if test="sno != null and sno != ''">
+                sno = #{sno},
+            </if>
+            <if test="courseId != null">
+                course_id = #{courseId},
+            </if>
+            <if test="score != null">
+                score = #{score},
+            </if>
+            <if test="del != null">
+                del = #{del},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
 
     <select id="findAll" resultMap="score">
         select * from score where del != 1
@@ -40,6 +69,30 @@
     <select id="findTotalBySno" resultType="java.lang.Integer">
         SELECT SUM(s.score*c.credit) from (score s INNER JOIN course c ON s.course_id = c.id)INNER JOIN `user` u
         ON u.sno = s.sno where u.sno = #{sno};
+    </select>
+
+    <select id="findScore" resultMap="score1">
+        SELECT s.* , c.name course_name , u.name user_name FROM
+        (score s INNER JOIN course c ON s.course_id = c.id)
+        INNER JOIN `user` u ON s.sno = u.sno WHERE
+        s.del = 0 AND c.del = 0 AND u.del = 0
+         <if test="sno != '' and sno != null">
+             and s.sno = #{sno}
+         </if>
+         <if test="courseId != null">
+             and s.course_id = #{courseId}
+         </if>
+         <if test="minScore != null">
+                /* &gt;表示大于 */
+             and s.score &gt;= #{minScore}
+         </if>
+         <if test="maxScore != null">
+                /* &lt;表示小于 */
+             and s.score &lt;= #{maxScore}
+         </if>
+    </select>
+    <select id="findById" resultMap="score">
+        select * from score where del = 0 and id = #{id}
     </select>
 
 </mapper>

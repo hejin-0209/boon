@@ -22,5 +22,5 @@ public interface HealthMapper {
 
     boolean update(Health health);
 
-    List<Health> findAll();
+    List<Health> findHealth(String sno);
 }

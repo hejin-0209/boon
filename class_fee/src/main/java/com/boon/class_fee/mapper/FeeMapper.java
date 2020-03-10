@@ -2,7 +2,9 @@ package com.boon.class_fee.mapper;
 
 import com.boon.pojo.ClassFee;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -16,11 +18,13 @@ public interface FeeMapper {
 
     boolean addFee(ClassFee fee);
 
-    double findMoney();
+    Double findMoney();
 
     boolean updateFee(ClassFee fee);
 
     ClassFee findById(int id);
 
     List<ClassFee> findBySno(String sno);
+
+    List<ClassFee> findFee(@Param("name")String name ,@Param("sno") String sno,@Param("startTime") Timestamp startTime,@Param("endTime") Timestamp endTime);
 }

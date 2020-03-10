@@ -7,6 +7,8 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,11 +26,12 @@ public class RewardServiceImpl implements RewardService {
     @Override
     public boolean addReward(Rewards rewards) {
         // 初始值等于该同学最后一次的奖惩的最终值，如果是第一次新增奖惩，则为0
-        Integer finalValue = rewardMapper.findFinalValue(rewards.getSno(), rewards.getTypeId()).getFinalValue();
-        if(finalValue == null){
+//        Integer finalValue = rewardMapper.findFinalValue(rewards.getSno(), rewards.getTypeId()).getFinalValue();
+        Rewards reward = rewardMapper.findFinalValue(rewards.getSno(), rewards.getTypeId());
+        if(reward == null){
             rewards.setInitialValue(0);
         }else{
-            rewards.setInitialValue(finalValue);
+            rewards.setInitialValue(reward.getFinalValue());
         }
         //设置奖惩的值
         if(rewards.getReward() != null){
@@ -67,7 +70,20 @@ public class RewardServiceImpl implements RewardService {
     }
 
     @Override
-    public List<Rewards> findAll() {
-        return rewardMapper.findAll ();
+    public List<Rewards> findRewards(String sno, Integer typeId, Timestamp startTime, Timestamp endTime) {
+        String name = null;
+        int x = 0;
+        if(sno != null){
+            for (int i = sno.length(); --i >= 0; ) {
+                if (Character.isDigit(sno.charAt(i))) {
+                    x++;
+                }
+            }
+            if(x != sno.length()){
+                name = sno;
+                sno = null;
+            }
+        }
+        return rewardMapper.findRewards (name,sno,typeId,startTime,endTime);
     }
 }

@@ -5,6 +5,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.security.PermitAll;
 import java.util.List;
@@ -23,7 +24,7 @@ public interface ITypeService {
      * @param type
      * @return
      */
-    @RequestMapping("boon/reward-proxy/type/addType")
+    @RequestMapping(value = "boon/reward-proxy/type/addType",method = RequestMethod.POST)
     boolean addType(@RequestBody Type type);
 
     /**
@@ -31,14 +32,14 @@ public interface ITypeService {
      * @param id
      * @return
      */
-    @RequestMapping("boon/reward-proxy/type/findById/{id}")
+    @RequestMapping(value = "boon/reward-proxy/type/findById/{id}",method = RequestMethod.GET)
     Type findById(@PathVariable(value = "id") int id);
 
     /**
      * 查询所有的类型
      * @return
      */
-    @RequestMapping("boon/reward-proxy/type/findAll")
+    @RequestMapping(value = "boon/reward-proxy/type/findAll",method = RequestMethod.GET)
     List<Type> findAll();
 
     /**
@@ -46,7 +47,7 @@ public interface ITypeService {
      * @param parentId
      * @return
      */
-    @RequestMapping("boon/reward-proxy/type/findParentId/{parentId}")
+    @RequestMapping(value = "boon/reward-proxy/type/findParentId/{parentId}",method = RequestMethod.GET)
     List<Type> findParentId(@PathVariable(value = "parentId") Integer parentId);
 
     /**
@@ -54,7 +55,7 @@ public interface ITypeService {
      * @param type
      * @return
      */
-    @RequestMapping("boon/reward-proxy/type/update")
+    @RequestMapping(value = "boon/reward-proxy/type/update",method = RequestMethod.POST)
     boolean update(@RequestBody Type type);
 
     /**
@@ -62,6 +63,14 @@ public interface ITypeService {
      * @param id
      * @return
      */
-    @RequestMapping("boon/reward-proxy/type/delete/{id}")
+    @RequestMapping(value = "boon/reward-proxy/type/delete/{id}",method = RequestMethod.DELETE)
     boolean delete(@PathVariable(value = "id") Integer id);
+
+    /**
+     * 批量删除
+     * @param ids
+     * @return
+     */
+    @RequestMapping(value = "boon/reward-proxy/type/delBatch/{ids}",method = RequestMethod.DELETE)
+    boolean delBatch(@PathVariable(value = "ids") int[] ids);
 }

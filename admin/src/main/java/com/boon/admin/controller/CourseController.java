@@ -50,4 +50,15 @@ public class CourseController {
         return courseService.delete(id);
     }
 
+    /* 获取课程的数量 */
+    @GetMapping("findCount")
+    public Integer findCount(){
+        return courseService.findCount();
+    }
+
+    /* 批量删除课程 */
+    @PostMapping("delBatch/{ids}")
+    public boolean delBatch(@PathVariable(value = "ids") int[] ids){
+        return courseService.delBatch(ids);
+    }
 }

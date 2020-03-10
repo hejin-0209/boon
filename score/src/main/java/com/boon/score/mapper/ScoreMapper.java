@@ -2,6 +2,7 @@ package com.boon.score.mapper;
 
 import com.boon.pojo.Score;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -27,4 +28,10 @@ public interface ScoreMapper {
 
     Integer findTotalBySno(String sno);
 
+    List<Score> findScore(@Param("sno") String sno, @Param("courseId") Integer courseId,
+                          @Param("minScore") Integer minScore, @Param("maxScore") Integer maxScore);
+
+    Score findById(Integer id);
+
+    boolean update(Score score);
 }

@@ -1,7 +1,9 @@
 package com.boon.admin.controller;
 
 import com.boon.admin.service.ICapacityService;
+import com.boon.admin.service.IRewardService;
 import com.boon.pojo.Capacity;
+import com.boon.pojo.Rewards;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +21,9 @@ public class CapacityController {
 
     @Autowired
     private ICapacityService capacityService;
+
+    @Autowired
+    private IRewardService rewardService;
 
     // 新增个人能力
     @PostMapping("addCapacity")
@@ -45,8 +50,40 @@ public class CapacityController {
     }
 
     // 查询所有的个人能力
-    @GetMapping("findAll")
-    public List<Capacity> findAll(){
-        return capacityService.findAll();
+    @GetMapping("findCapacity/{sno}")
+    public List<Capacity> findCapacity(@PathVariable(value = "sno") String sno){
+        List<Capacity> capacitys = capacityService.findCapacity(sno);
+        for (Capacity capacity : capacitys) {
+            Rewards finalValue = rewardService.findFinalValue(capacity.getSno(), 7);
+            if (finalValue == null){
+                capacity.setFinalRewards(0);
+            }else{
+                capacity.setFinalRewards(finalValue.getFinalValue());
+            }
+        }
+
+        return capacitys;
+    }
+
+    // 删除个人能力
+    @DeleteMapping("delete/{sno}")
+    public boolean delete(@PathVariable(value = "sno") String sno){
+        return capacityService.delete(sno);
+    }
+
+    // 批量删除
+    @DeleteMapping("delBatch/{snos}")
+    public boolean delBatch(@PathVariable(value = "snos") String[] snos){
+        int i = 0;
+        for (String sno : snos) {
+            boolean b = capacityService.delete(sno);
+            if(b){
+                i++;
+            }
+        }
+        if(i == snos.length){
+            return true;
+        }
+        return false;
     }
 }

@@ -18,4 +18,3 @@ eureka:
     service-url:
       defaultZone: http://boon:123456@127.0.0.1:9713/eureka
 
-

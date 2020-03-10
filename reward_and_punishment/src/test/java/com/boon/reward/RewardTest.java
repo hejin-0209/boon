@@ -37,9 +37,9 @@ public class RewardTest {
     @Test
     public void addReward(){
         Rewards rewards = new Rewards();
-        rewards.setSno("2016901138");
-        rewards.setTypeId(1);
-        rewards.setReward(2);
+        rewards.setSno("2016901135");
+        rewards.setTypeId(2);
+        rewards.setReward(3);
         rewards.setDescription("奖状一张");
         boolean b = rewardService.addReward(rewards);
         System.out.println(b);
@@ -72,7 +72,7 @@ public class RewardTest {
 
     @Test
     public void findAll(){
-        List<Rewards> rewards = rewardService.findAll();
+        List<Rewards> rewards = rewardService.findRewards(null,null,null,null);
         for (Rewards reward : rewards) {
             System.out.println(reward);
         }

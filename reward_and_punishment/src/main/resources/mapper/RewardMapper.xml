@@ -12,6 +12,8 @@
         <result property="createTime" column="create_time"/>
         <result property="description" column="description"/>
         <result property="finalValue" column="final_value"/>
+        <result property="typeName" column="type_name"/>
+        <result property="userName" column="user_name"/>
     </resultMap>
 
     <insert id="addReward" parameterType="com.boon.pojo.Rewards">
@@ -66,8 +68,25 @@
     <select id="findById" resultMap="rewards">
         select * from rewards where id = #{id}
     </select>
-    <select id="findAll" resultMap="rewards">
-        select * from rewards
+    <select id="findRewards" resultMap="rewards">
+        SELECT r.* , t.`alias` type_name , u.`name` user_name from
+        (rewards r INNER JOIN type t ON r.type_id = t.id)
+        INNER JOIN `user` u ON r.sno = u.sno WHERE t.del = 0 and u.del = 0
+        <if test="name != null and name != ''">
+            and u.name = #{name}
+        </if>
+        <if test="sno != null and sno != ''">
+            and r.sno = #{sno}
+        </if>
+        <if test="typeId != null">
+            and r.type_id = #{typeId}
+        </if>
+        <if test="startTime != null">
+            and UNIX_TIMESTAMP(r.create_time) &gt; UNIX_TIMESTAMP(#{startTime})
+        </if>
+        <if test="endTime != null">
+            and UNIX_TIMESTAMP(r.create_time) &lt; UNIX_TIMESTAMP(#{endTime})
+        </if>
     </select>
 
 

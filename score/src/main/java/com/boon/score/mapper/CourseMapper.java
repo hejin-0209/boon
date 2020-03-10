@@ -22,4 +22,5 @@ public interface CourseMapper {
 
     boolean update(Course course);
 
+    Integer findCount();
 }

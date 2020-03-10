@@ -1,6 +1,8 @@
 package com.boon.reward_and_punishment.controller;
 
 import com.boon.pojo.Capacity;
+import com.boon.pojo.Health;
+import com.boon.pojo.Rewards;
 import com.boon.reward_and_punishment.service.CapacityService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -57,9 +59,22 @@ public class CapacityController {
     }
 
     // 查询所有的个人能力
-    @GetMapping("findAll")
-    @ApiOperation(value = "查询所有的个人能力" , notes = "直接调用接口即可")
-    public List<Capacity> findAll(){
-        return capacityService.findAll();
+    @GetMapping("findCapacity/{sno}")
+    @ApiOperation(value = "查询所有的个人能力" , notes = "条件查询需要输入学号")
+    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
+            required = true ,dataType = "string")
+    public List<Capacity> findCapacity(@PathVariable(value = "sno") String sno){
+        if("null".equals(sno)){
+            sno = null;
+        }
+        return capacityService.findCapacity(sno);
     }
+
+    // 删除思想品德
+    @DeleteMapping("delete/{sno}")
+    public boolean delete(@PathVariable(value = "sno") String sno){
+        return capacityService.delete(sno);
+    }
+
+
 }

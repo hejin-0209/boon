@@ -1,11 +1,22 @@
 server:
   port: 8087
+  servlet:
+    session:
+      timeout: 30m
 
 spring:
   application:
     name: shopping-admin
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 1234
+    timeout: 1800000
+  mvc:
+    servlet:
+      load-on-startup: 1
 
-# ÅäÖÃ·şÎñ×¢²áÖĞĞÄµÄµØÖ·
+# æœåŠ¡æ³¨å†Œä¸­å¿ƒçš„é…ç½®
 eureka:
   client:
     service-url:
@@ -22,14 +33,14 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 2000
-# ·ÖÒ³²å¼ş
+# åˆ†é¡µæ’ä»¶
 pagehelper:
   helperDialect: mysql
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
 
-# fastDFSµÄÅäÖÃ
+# fastDFSçš„é…ç½®
 fdfs:
   so-timeout: 1501
   connect-timeout: 601
@@ -37,6 +48,14 @@ fdfs:
     width: 100
     height: 100
   tracker-list:
-    - 39.108.98.95:22122
+    -39.108.98.95:22122
+
+# tokençš„è¿‡æœŸæ—¶é—´ï¼Œå•ä½æ˜¯ç§’ï¼Œè¿™é‡Œè®¾ç½®ä¸º30åˆ†é’Ÿ
+token:
+  expire:
+    seconds: 30
+
+
+
 
 

@@ -2,6 +2,8 @@ package com.boon.admin.controller;
 
 import com.boon.admin.service.IInformService;
 import com.boon.pojo.Inform;
+import com.github.pagehelper.PageInfo;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,9 +35,10 @@ public class InformController {
     }
 
     // 查询所有的通知
-    @GetMapping("findAll")
-    public List<Inform> findAll(){
-        return informService.findAll();
+    @GetMapping("findAll/{page}/{sno}/{title}/{startTime}/{endTime}")
+    public PageInfo<Inform> findAll(@PathVariable("page") String page, @PathVariable("sno") String sno, @PathVariable("title") String title,
+                                    @PathVariable("startTime") String startTime, @PathVariable("endTime") String endTime){
+        return informService.findAll(page,sno,title,startTime,endTime);
     }
 
     // 通过管理员的学号来查询通知
@@ -54,5 +57,29 @@ public class InformController {
     @GetMapping("delete/{id}")
     public boolean delete(@PathVariable Integer id){
         return informService.delete(id);
+    }
+
+    // 获取通知的数量
+    @GetMapping("findCount")
+    public Integer findCount(){
+        return informService.findCount();
+    }
+
+    // 批量删除
+    @DeleteMapping("delBatch/{ids}")
+    public boolean delBatch(@PathVariable("ids") Integer[] ids){
+        int i = 0;
+        for (Integer id : ids) {
+            Inform inform = informService.findById(id);
+            inform.setDel(1);
+            boolean b = informService.update(inform);
+            if(b){
+                i++;
+            }
+        }
+        if(i == ids.length){
+            return true;
+        }
+        return false;
     }
 }

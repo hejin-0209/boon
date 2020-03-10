@@ -2,6 +2,7 @@ package com.boon.inform.service;
 
 import com.boon.pojo.Inform;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -16,11 +17,14 @@ public interface InformService {
 
     Inform findById(Integer id);
 
-    List<Inform> findAll();
+    List<Inform> findAll(String sno, String title, Timestamp sTime,Timestamp eTime);
 
     List<Inform> findBySno(String userSno);
 
     boolean update(Inform inform);
 
     boolean delete(Integer id);
+
+    Integer findCount();
+
 }

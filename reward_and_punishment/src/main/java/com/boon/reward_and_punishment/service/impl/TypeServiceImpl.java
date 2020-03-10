@@ -51,4 +51,21 @@ public class TypeServiceImpl implements TypeService {
         type.setDel(1);
         return typeMapper.update(type);
     }
+
+    @Override
+    public boolean delBatch(int[] ids) {
+        int i = 0;
+        for (int id : ids) {
+            Type type = typeMapper.findById(id);
+            type.setDel(1);
+            boolean b = typeMapper.update(type);
+            if (b){
+                i++;
+            }
+        }
+        if(i == ids.length){
+            return true;
+        }
+        return false;
+    }
 }

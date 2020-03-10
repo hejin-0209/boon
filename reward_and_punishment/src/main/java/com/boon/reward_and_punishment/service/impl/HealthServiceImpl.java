@@ -61,7 +61,15 @@ public class HealthServiceImpl implements HealthService {
     }
 
     @Override
-    public List<Health> findAll() {
-        return healthMapper.findAll();
+    public List<Health> findHealth(String sno) {
+        return healthMapper.findHealth(sno);
+    }
+
+    @Override
+    public boolean delete(String sno) {
+        Health health = healthMapper.findBySno(sno);
+        health.setDel(1);
+
+        return healthMapper.update(health);
     }
 }

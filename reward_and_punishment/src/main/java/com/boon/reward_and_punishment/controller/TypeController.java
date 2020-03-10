@@ -64,11 +64,20 @@ public class TypeController {
     }
 
     // 删除类型
-    @GetMapping("delete/{id}")
+    @DeleteMapping("delete/{id}")
     @ApiOperation(value = "根据id删除类型" , notes = "需要提供类型的id")
     @ApiImplicitParam(paramType = "path" , name = "id" ,value = "类型的id",
             required = true ,dataType = "int")
     public boolean delete(@PathVariable Integer id){
         return typeService.delete(id);
+    }
+
+    // 批量删除
+    @DeleteMapping("delBatch/{ids}")
+    @ApiOperation(value = "批量删除", notes = "需要提供要删除的id集")
+    @ApiImplicitParam(paramType = "path" , name = "ids" ,value = "类型的id集",
+            required = true ,dataType = "int[]")
+    public boolean delBatch(@PathVariable(value = "ids") int[] ids){
+        return typeService.delBatch(ids);
     }
 }

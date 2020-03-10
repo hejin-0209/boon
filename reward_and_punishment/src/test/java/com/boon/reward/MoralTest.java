@@ -60,7 +60,7 @@ public class MoralTest {
 
     @Test
     public void findAll(){
-        List<Moral> morals = moralService.findAll();
+        List<Moral> morals = moralService.findMoral(null);
         for (Moral moral : morals) {
             System.out.println(moral);
         }

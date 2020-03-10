@@ -1,7 +1,9 @@
 package com.boon.admin.controller;
 
 import com.boon.admin.service.IMoralService;
+import com.boon.admin.service.IRewardService;
 import com.boon.pojo.Moral;
+import com.boon.pojo.Rewards;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,9 +22,12 @@ public class MoralController {
     @Autowired
     private IMoralService moralService;
 
+    @Autowired
+    private IRewardService rewardService;
+
     // 新增思想品德
     @PostMapping("addMoral")
-    private boolean addMoral(@RequestBody Moral moral){
+    public boolean addMoral(@RequestBody Moral moral){
         return moralService.addMoral(moral);
     }
 
@@ -45,8 +50,42 @@ public class MoralController {
     }
 
     // 查询所有的思想品德
-    @GetMapping("findAll")
-    public List<Moral> findAll(){
-        return moralService.findAll();
+    @GetMapping("findMoral/{sno}")
+    public List<Moral> findMoral(@PathVariable(value = "sno") String sno){
+
+        List<Moral> morals = moralService.findMoral(sno);
+        for (Moral moral : morals) {
+            Rewards finalValue = rewardService.findFinalValue(moral.getSno(), 1);
+            if (finalValue == null){
+                moral.setFinalRewards(0);
+            }else{
+                moral.setFinalRewards(finalValue.getFinalValue());
+            }
+        }
+
+        return morals;
+    }
+
+    // 删除思想品德
+    @DeleteMapping("delete/{sno}")
+    public boolean delete(@PathVariable(value = "sno") String sno){
+        return moralService.delete(sno);
+    }
+
+    // 批量删除
+    @DeleteMapping("delBatch/{snos}")
+    public boolean delBatch(@PathVariable(value = "snos") String[] snos){
+        int i = 0;
+        for (String sno : snos) {
+            boolean b = moralService.delete(sno);
+            if(b){
+                i++;
+            }
+        }
+        if(i == snos.length){
+            return true;
+        }
+
+        return false;
     }
 }

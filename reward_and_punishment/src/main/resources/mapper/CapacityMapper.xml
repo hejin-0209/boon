@@ -7,10 +7,11 @@
         <result property="basic" column="basic"/>
         <result property="rewardsSno" column="rewards_sno"/>
         <result property="proportion" column="proportion"/>
+        <result property="userName" column="user_name"/>
     </resultMap>
 
     <insert id="addCapacity" parameterType="com.boon.pojo.Capacity">
-        insert into Capacity values (#{sno},#{basic},#{rewardsSno},#{proportion})
+        insert into Capacity values (#{sno},#{basic},#{rewardsSno},#{proportion},0)
     </insert>
 
     <update id="update">
@@ -24,6 +25,9 @@
             </if>
             <if test="proportion != null">
                 proportion = #{proportion},
+            </if>
+            <if test="del != null">
+                del = #{del},
             </if>
         </set>
         where sno = #{sno}
@@ -42,7 +46,10 @@
          AND type_id = 3)) AS b) AS d;
     </select>
 
-    <select id="findAll" resultMap="capacity">
-        select * from capacity
+    <select id="findCapacity" resultMap="capacity">
+        SELECT c.* , u.`name` user_name FROM capacity c INNER JOIN `user` u ON c.sno = u.sno WHERE c.del = 0 AND u.del = 0
+        <if test="sno != null and sno != ''">
+            and c.sno = #{sno}
+        </if>
     </select>
 </mapper>

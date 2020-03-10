@@ -3,9 +3,11 @@ package com.boon.inform.service.impl;
 import com.boon.inform.mapper.InformMapper;
 import com.boon.inform.service.InformService;
 import com.boon.pojo.Inform;
+import org.bouncycastle.asn1.x509.Time;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -22,6 +24,7 @@ public class InformServiceImpl implements InformService {
 
     @Override
     public boolean addInform(Inform inform) {
+        inform.setDel(0);
         return informMapper.addInform(inform);
     }
 
@@ -31,8 +34,22 @@ public class InformServiceImpl implements InformService {
     }
 
     @Override
-    public List<Inform> findAll() {
-        return informMapper.findAll();
+    public List<Inform> findAll(String sno, String title, Timestamp startTime, Timestamp endTime) {
+        String name = null;
+        int x = 0;
+        if(sno != null){
+            for (int i = sno.length(); --i >= 0; ) {
+                if (Character.isDigit(sno.charAt(i))) {
+                    x++;
+                }
+            }
+            if(x != sno.length()){
+                name = sno;
+                sno = null;
+            }
+        }
+        System.out.println("传进来的数据是："+ sno + name + title + startTime + endTime);
+        return informMapper.findAll(sno,name,title,startTime,endTime);
     }
 
     @Override
@@ -50,5 +67,10 @@ public class InformServiceImpl implements InformService {
         Inform inform = informMapper.findById(id);
         inform.setDel(1);
         return informMapper.update(inform);
+    }
+
+    @Override
+    public Integer findCount() {
+        return informMapper.findCount();
     }
 }

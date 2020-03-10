@@ -57,9 +57,20 @@ public class MoralController {
     }
 
     // 查询所有的思想品德
-    @GetMapping("findAll")
-    @ApiOperation(value = "查询所有的思想品德" , notes = "直接调用接口即可")
-    public List<Moral> findAll(){
-        return moralService.findAll();
+    @GetMapping("findMoral/{sno}")
+    @ApiOperation(value = "查询所有的思想品德" , notes = "查询的话需要输入学号")
+    @ApiImplicitParam(paramType = "path" , name = "sno" ,value = "学生的学号",
+            required = true ,dataType = "string")
+    public List<Moral> findMoral(@PathVariable(value = "sno") String sno){
+        if("null".equals(sno)){
+            sno = null;
+        }
+        return moralService.findMoral(sno);
+    }
+
+    // 删除思想品德
+    @DeleteMapping("delete/{sno}")
+    public boolean delete(@PathVariable(value = "sno") String sno){
+        return moralService.delete(sno);
     }
 }

@@ -21,4 +21,8 @@ public interface UserMapper {
     User findBySno(String sno);
 
     boolean updateUser(User user);
+
+    Integer findCount();
+
+    List<User> findDelete();
 }

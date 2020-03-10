@@ -60,7 +60,7 @@ public class HealthTest {
 
     @Test
     public void findAll(){
-        List<Health> healths = healthService.findAll();
+        List<Health> healths = healthService.findHealth(null);
         for (Health health : healths) {
             System.out.println(health);
         }

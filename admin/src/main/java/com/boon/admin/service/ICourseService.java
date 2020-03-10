@@ -5,6 +5,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -22,14 +23,14 @@ public interface ICourseService {
      * @param course
      * @return
      */
-    @RequestMapping("boon/score-proxy/course/addCourse")
+    @RequestMapping(value = "boon/score-proxy/course/addCourse",method = RequestMethod.POST)
     boolean addCourse(@RequestBody Course course);
 
     /**
      * 查询所有的课程
      * @return
      */
-    @RequestMapping("boon/score-proxy/course/findCourse")
+    @RequestMapping(value = "boon/score-proxy/course/findCourse",method = RequestMethod.GET)
     List<Course> findCourse();
 
     /**
@@ -37,7 +38,7 @@ public interface ICourseService {
      * @param id
      * @return
      */
-    @RequestMapping("boon/score-proxy/course/findById/{id}")
+    @RequestMapping(value = "boon/score-proxy/course/findById/{id}" , method = RequestMethod.GET)
     Course findById(@PathVariable(value = "id") int id);
 
     /**
@@ -45,7 +46,7 @@ public interface ICourseService {
      * @param course
      * @return
      */
-    @RequestMapping("boon/score-proxy/course/update")
+    @RequestMapping(value = "boon/score-proxy/course/update",method = RequestMethod.POST)
     boolean update(Course course);
 
     /**
@@ -53,6 +54,21 @@ public interface ICourseService {
      * @param id
      * @return
      */
-    @RequestMapping("boon/score-proxy/course/delete/{id}")
+    @RequestMapping(value = "boon/score-proxy/course/delete/{id}",method = RequestMethod.DELETE)
     boolean delete(@PathVariable(value = "id") int id);
+
+    /**
+     * 获取课程的数量
+     * @return
+     */
+    @RequestMapping(value = "boon/score-proxy/course/findCount",method = RequestMethod.GET)
+    Integer findCount();
+
+    /**
+     * 批量删除课程
+     * @param ids
+     * @return
+     */
+    @RequestMapping(value = "boon/score-proxy/course/delBatch/{ids}",method = RequestMethod.POST)
+    boolean delBatch(@PathVariable(value = "ids") int[] ids);
 }

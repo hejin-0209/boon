@@ -19,5 +19,10 @@ public class Capacity implements Serializable {
   private Integer basic;        // 个人能力表的基本值
   private String rewardsSno;   // 个人能力表的奖惩外键
   private double proportion;    // 个人能力表在综测中所占的比例
+  private Integer del;            // 删除状态
+
+  private String userName;         // 扩展字段用户名
+  private Integer finalRewards;    // 扩展字段，最后的奖惩分
+
 
 }

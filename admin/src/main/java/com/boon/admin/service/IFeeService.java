@@ -1,6 +1,8 @@
 package com.boon.admin.service;
 
 import com.boon.pojo.ClassFee;
+import com.boon.pojo.Rewards;
+import com.github.pagehelper.PageInfo;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,7 +32,7 @@ public interface IFeeService {
      * @return
      */
     @RequestMapping("boon/fee-proxy/fee/findMoney")
-    double findMoney();
+    Double findMoney();
 
     /**
      * 班费管理的更新
@@ -55,4 +57,16 @@ public interface IFeeService {
      */
     @RequestMapping("boon/fee-proxy/fee/findBySno/{sno}")
     List<ClassFee> findBySno(@PathVariable(value = "sno") String sno);
+
+    /**
+     * 查询所有的班费情况
+     * @param page
+     * @param sno
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    @RequestMapping("boon/fee-proxy/fee/findFee/{page}/{sno}/{startTime}/{endTime}")
+    PageInfo<ClassFee> findFee(@PathVariable(value = "page") String page,@PathVariable(value = "sno") String sno,
+                               @PathVariable(value = "startTime") String startTime,@PathVariable(value = "endTime") String endTime);
 }

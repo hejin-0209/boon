@@ -44,7 +44,7 @@ public class FeeTest {
 
     @Test
     public void findMoney(){
-        double money = feeService.findMoney();
+        Double money = feeService.findMoney();
         System.out.println(money);
     }
 

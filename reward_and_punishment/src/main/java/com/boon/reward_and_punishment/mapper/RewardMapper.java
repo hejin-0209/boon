@@ -4,6 +4,8 @@ import com.boon.pojo.Rewards;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,6 +30,6 @@ public interface RewardMapper {
 
     Rewards findById(Integer id);
 
-    List<Rewards> findAll();
+    List<Rewards> findRewards(@Param("name") String name, @Param("sno") String sno, @Param("typeId") Integer typeId, @Param("startTime") Timestamp startTime, @Param("endTime") Timestamp endTime);
 
 }

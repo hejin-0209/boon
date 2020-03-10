@@ -10,11 +10,12 @@
         <result property="operationTime" column="operation_time"/>
         <result property="userSno" column="user_sno"/>
         <result property="description" column="description"/>
+        <result property="userName" column="user_name"/>
     </resultMap>
 
     <insert id="addFee" parameterType="com.boon.pojo.ClassFee">
         insert into class_fee values(null,#{income},#{expend},#{money},
-        #{userSno},#{operationTime},#{description})
+        #{userSno},now(),#{description})
     </insert>
 
     <update id="updateFee" >
@@ -42,7 +43,7 @@
         where id = #{id}
     </update>
 
-    <select id="findMoney" resultType="double">
+    <select id="findMoney" resultType="Double">
         SELECT money FROM class_fee WHERE id=(SELECT max(id) from class_fee)
     </select>
     <select id="findById" resultMap="Fee">
@@ -50,5 +51,21 @@
     </select>
     <select id="findBySno" resultMap="Fee">
         select * from class_fee where user_sno = #{sno}
+    </select>
+    <select id="findFee" resultMap="Fee">
+        SELECT f.* , u.`name` user_name from
+        class_fee f INNER JOIN `user` u ON f.user_sno = u.sno WHERE u.del = 0
+        <if test="name != null and name != ''">
+            and u.name = #{name}
+        </if>
+        <if test="sno != null and sno != ''">
+            and f.user_sno = #{sno}
+        </if>
+        <if test="startTime != null">
+            and UNIX_TIMESTAMP(f.operation_time) &gt; UNIX_TIMESTAMP(#{startTime})
+        </if>
+        <if test="endTime != null">
+            and UNIX_TIMESTAMP(f.operation_time) &lt; UNIX_TIMESTAMP(#{endTime})
+        </if>
     </select>
 </mapper>

@@ -60,7 +60,15 @@ public class MoralServiceImpl implements MoralService {
     }
 
     @Override
-    public List<Moral> findAll() {
-        return moralMapper.findAll();
+    public List<Moral> findMoral(String sno) {
+        return moralMapper.findMoral(sno);
+    }
+
+    @Override
+    public boolean delete(String sno) {
+        Moral moral = moralMapper.findBySno(sno);
+        moral.setDel(1);
+        boolean b = moralMapper.update(moral);
+        return b;
     }
 }

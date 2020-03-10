@@ -31,7 +31,7 @@ public class ScoreTest {
     public void addScore(){
         Score score = new Score();
         score.setSno("2016901147");
-        score.setCourseId(2);
+        score.setCourseId(3);
         score.setScore(90);
         boolean b = scoreService.addScore(score);
         System.out.println(b);
@@ -90,5 +90,18 @@ public class ScoreTest {
         Integer total = scoreService.findTotalBySno(sno);
         Integer credit = scoreService.findLearnCreditBySno(sno);
         return (double)total/credit;
+    }
+
+    //成绩和课程、用户的联合查询
+    @Test
+    public void findScore(){
+        String sno = new String("2016901147");
+        Integer courseId = 1;
+        Integer minScore = null;
+        Integer maxSocre = null;
+        List<Score> list = scoreService.findScore(sno,courseId,minScore,maxSocre);
+        for (Score score : list) {
+            System.out.println(score);
+        }
     }
 }

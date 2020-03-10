@@ -5,6 +5,7 @@ import com.boon.score.service.CourseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -55,12 +56,25 @@ public class CourseController {
     }
 
     /* 删除一个课程 */
-    @GetMapping("delete/{id}")
+    @DeleteMapping("delete/{id}")
     @ApiOperation(value = "删除一门课程" , notes = "这里的删除不是真删，而是将课程的del字段的值改为1")
     @ApiImplicitParam(paramType = "path" , name = "id" ,value = "课程的id",
             required = true ,dataType = "int")
     public boolean delete(@PathVariable int id){
         return courseService.delete(id);
+    }
+
+    /*查询课程的数量*/
+    @GetMapping("findCount")
+    @ApiOperation(value = "查询课程的数量",notes = "直接调用接口获取数据")
+    public Integer findCount(){
+        return courseService.findCount();
+    }
+
+    /* 批量删除课程 */
+    @PostMapping("delBatch/{ids}")
+    public boolean delBatch(@PathVariable(value = "ids") int[] ids){
+        return courseService.delBatch(ids);
     }
 
 }

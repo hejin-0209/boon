@@ -1,6 +1,7 @@
 package com.boon.reward_and_punishment.service;
 
 import com.boon.pojo.Capacity;
+import com.boon.pojo.Health;
 
 import java.util.List;
 
@@ -20,5 +21,7 @@ public interface CapacityService {
 
     boolean update(Capacity capacity);
 
-    List<Capacity> findAll();
+    List<Capacity> findCapacity(String sno);
+
+    boolean delete(String sno);
 }

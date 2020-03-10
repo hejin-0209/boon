@@ -21,6 +21,6 @@ public interface MoralMapper {
 
     boolean update(Moral moral);
 
-    List<Moral> findAll();
+    List<Moral> findMoral(String sno);
 
 }

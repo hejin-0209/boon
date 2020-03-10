@@ -25,4 +25,14 @@ public interface ScoreService {
     Integer findLearnCreditBySno(String sno);
 
     Integer findTotalBySno(String sno);
+
+    List<Score> findScore(String sno, Integer courseId, Integer minScore, Integer maxScore);
+
+    boolean delBatch(int[] ids);
+
+    Score findById(Integer id);
+
+    boolean update(Score score);
+
+    boolean delete(Integer id);
 }

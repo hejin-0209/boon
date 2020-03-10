@@ -51,8 +51,14 @@ public class TypeController {
     }
 
     // 删除类型
-    @GetMapping("delete/{id}")
+    @DeleteMapping("delete/{id}")
     public boolean delete(@PathVariable Integer id){
         return typeService.delete(id);
+    }
+
+    // 批量删除
+    @DeleteMapping("delBatch/{ids}")
+    public boolean delBatch(@PathVariable(value = "ids") int[] ids){
+        return typeService.delBatch(ids);
     }
 }

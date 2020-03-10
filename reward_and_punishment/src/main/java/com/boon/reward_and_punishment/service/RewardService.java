@@ -3,6 +3,8 @@ package com.boon.reward_and_punishment.service;
 import com.boon.pojo.Rewards;
 import org.apache.ibatis.annotations.Param;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,6 +27,6 @@ public interface RewardService {
 
     Rewards findById(Integer id);
 
-    List<Rewards> findAll();
+    List<Rewards> findRewards(String sno, Integer typeId, Timestamp startTime, Timestamp endTime);
 
 }

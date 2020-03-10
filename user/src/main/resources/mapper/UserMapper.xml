@@ -17,7 +17,7 @@
         <result property="del" column="del"/>
     </resultMap>
     <insert id="addUser" parameterType="com.boon.pojo.User">
-        insert into user values(#{sno},#{name},#{password},#{phone},#{gender}, UNIX_TIMESTAMP(#{birthday}),#{qq},
+        insert into user values(#{sno},#{name},#{password},#{phone},#{gender},now(),#{qq},
         #{picture},#{signature},#{state},#{del})
     </insert>
     <update id="updateUser">
@@ -47,10 +47,10 @@
             <if test="signature != null and signature != ''">
                 signature = #{signature},
             </if>
-            <if test="state != null and state != ''">
+            <if test="state != null">
                 state = #{state},
             </if>
-            <if test="del != null and del != ''">
+            <if test="del != null">
                 del = #{del},
             </if>
         </set>
@@ -58,9 +58,15 @@
     </update>
 
     <select id="findAll" resultMap="user">
-        select * from user where state = 1 and del = 0
+        select * from user where del = 0
     </select>
     <select id="findBySno" resultMap="user">
-        select * from user where del = 0 and sno = #{sno}
+        select * from user where sno = #{sno}
+    </select>
+    <select id="findCount" resultType="java.lang.Integer">
+        select count(*) from user where del = 0
+    </select>
+    <select id="findDelete" resultType="com.boon.pojo.User">
+        select * from user where del = 1
     </select>
 </mapper>

@@ -48,4 +48,26 @@ public class CourseServiceImpl implements CourseService {
         boolean b = courseMapper.update(course);
         return b;
     }
+
+    @Override
+    public Integer findCount() {
+        return courseMapper.findCount();
+    }
+
+    @Override
+    public boolean delBatch(int[] ids) {
+        int i = 0;
+        for (int id : ids) {
+            Course course = courseMapper.findById(id);
+            course.setDel(1);
+            boolean b = courseMapper.update(course);
+            if(b){
+                i++;
+            }
+        }
+        if(i == ids.length){
+            return true;
+        }
+        return false;
+    }
 }

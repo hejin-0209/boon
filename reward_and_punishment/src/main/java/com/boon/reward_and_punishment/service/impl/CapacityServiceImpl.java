@@ -51,8 +51,16 @@ public class CapacityServiceImpl implements CapacityService {
     }
 
     @Override
-    public List<Capacity> findAll() {
-        return capacityMapper.findAll();
+    public List<Capacity> findCapacity(String sno) {
+        return capacityMapper.findCapacity(sno);
+    }
+
+    @Override
+    public boolean delete(String sno) {
+        Capacity capacity = capacityMapper.findBySno(sno);
+        capacity.setDel(1);
+
+        return capacityMapper.update(capacity);
     }
 
 }

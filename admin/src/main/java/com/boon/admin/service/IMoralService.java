@@ -5,6 +5,7 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public interface IMoralService {
      * @param moral
      * @return
      */
-    @RequestMapping("boon/reward-proxy/moral/addMoral")
+    @RequestMapping(value = "boon/reward-proxy/moral/addMoral",method = RequestMethod.POST)
     boolean addMoral(@RequestBody Moral moral);
 
     /**
@@ -30,7 +31,7 @@ public interface IMoralService {
      * @param sno
      * @return
      */
-    @RequestMapping("boon/reward-proxy/moral/findBySno/{sno}")
+    @RequestMapping(value = "boon/reward-proxy/moral/findBySno/{sno}",method = RequestMethod.GET)
     Moral findBySno(@PathVariable(value = "sno") String sno);
 
     /**
@@ -38,7 +39,7 @@ public interface IMoralService {
      * @param sno
      * @return
      */
-    @RequestMapping("boon/reward-proxy/moral/convert/{sno}")
+    @RequestMapping(value = "boon/reward-proxy/moral/convert/{sno}",method = RequestMethod.GET)
     Double convert(@PathVariable(value = "sno") String sno);
 
     /**
@@ -46,14 +47,21 @@ public interface IMoralService {
      * @param moral
      * @return
      */
-    @RequestMapping("boon/reward-proxy/moral/update")
+    @RequestMapping(value = "boon/reward-proxy/moral/update",method = RequestMethod.POST)
     boolean update(@RequestBody Moral moral);
 
     /**
      * 查询所有的思想品德
      * @return
      */
-    @RequestMapping("boon/reward-proxy/moral/findAll")
-    List<Moral> findAll();
+    @RequestMapping(value = "boon/reward-proxy/moral/findMoral/{sno}",method = RequestMethod.GET)
+    List<Moral> findMoral(@PathVariable(value = "sno") String  sno);
 
+    /**
+     * 删除思想品德
+     * @param sno
+     * @return
+     */
+    @RequestMapping(value = "boon/reward-proxy/moral/delete/{sno}",method = RequestMethod.DELETE)
+    boolean delete(@PathVariable(value = "sno") String sno);
 }

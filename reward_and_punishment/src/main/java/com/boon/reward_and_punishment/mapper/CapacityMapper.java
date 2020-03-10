@@ -1,6 +1,7 @@
 package com.boon.reward_and_punishment.mapper;
 
 import com.boon.pojo.Capacity;
+import com.boon.pojo.Health;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -22,5 +23,5 @@ public interface CapacityMapper {
 
     boolean update(Capacity capacity);
 
-    List<Capacity> findAll();
+    List<Capacity> findCapacity(String sno);
 }
