@@ -38,12 +38,13 @@
     </select>
 
     <select id="convert" resultType="java.lang.Double">
-        SELECT (proportion*sum) AS `convert` FROM (SELECT DISTINCT proportion FROM capacity) AS c,
-        (SELECT sum1+sum2 AS sum FROM
-        (SELECT basic AS sum1 FROM capacity WHERE sno = #{sno}) AS a,
-        (SELECT final_value AS sum2 FROM rewards WHERE id =
-        (SELECT MAX(r.id) FROM rewards r INNER JOIN capacity c ON r.sno = c.sno WHERE c.sno=#{sno}
-         AND type_id = 3)) AS b) AS d;
+        SELECT (proportion*sum) AS `convert` FROM
+        (SELECT DISTINCT proportion FROM capacity) as c,
+        (SELECT sum1+sum2 as sum from
+        (SELECT basic AS sum1 FROM capacity WHERE sno = #{sno}) as a,
+        (select final_value AS sum2 from rewards where id =
+        (select max(r.id) from rewards r INNER JOIN capacity c ON r.sno = c.sno
+        where c.sno=#{sno} and type_id = 13)) as b) as d;
     </select>
 
     <select id="findCapacity" resultMap="capacity">

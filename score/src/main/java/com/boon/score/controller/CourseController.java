@@ -1,13 +1,21 @@
 package com.boon.score.controller;
 
 import com.boon.pojo.Course;
+import com.boon.pojo.User;
+import com.boon.pojo.vo.FileDto;
 import com.boon.score.service.CourseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -75,6 +83,41 @@ public class CourseController {
     @PostMapping("delBatch/{ids}")
     public boolean delBatch(@PathVariable(value = "ids") int[] ids){
         return courseService.delBatch(ids);
+    }
+
+    @PostMapping("bulkImport")
+    public boolean bulkImport(MultipartFile file) throws Exception{
+        XSSFWorkbook workbook = new XSSFWorkbook(file.getInputStream());//创建Excel,读取文件内容
+        //读取文件第一个sheet文件
+        //HSSFSheet sheet=workbook.getSheet("Sheet0");//通过文件名称获取
+        XSSFSheet sheet = workbook.getSheetAt(0);//通过下标获取文件，第一页
+        int firstRowNum = 1;
+        //获取sheet中最后一行行号
+        int lastRowNum = sheet.getLastRowNum()+1;
+        Course course = new Course();
+        int x = 0;      // 计时器
+        for (int i = firstRowNum; i < lastRowNum; i++) {
+            XSSFRow row = sheet.getRow(i);
+            //获取行内单元格号
+            int lastCellNum = row.getLastCellNum();
+            for (int j = 0; j < lastCellNum; j+=3) {
+                Cell cell = row.getCell(j);
+                Cell cell1 = row.getCell(j+1);
+                Cell cell2 = row.getCell(j + 2);
+                cell2.setCellType(Cell.CELL_TYPE_STRING);
+                course.setName(cell.getStringCellValue());
+                course.setTerm(cell1.getStringCellValue());
+                course.setCredit(Integer.valueOf(cell2.getStringCellValue()));
+            }
+            boolean b = courseService.addCourse(course);
+            if (b){
+                x ++;
+            }
+        }
+        if (lastRowNum == x+1){
+            return true;
+        }
+        return false;
     }
 
 }

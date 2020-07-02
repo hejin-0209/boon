@@ -21,7 +21,12 @@ public class RightServiceImpl implements RightService {
     private RightMapper rightMapper;
 
     @Override
-    public List<Right> findAll() {
-        return rightMapper.findAll();
+    public List<Right> findAll(Integer parentId,String name) {
+        return rightMapper.findAll(parentId,name);
+    }
+
+    @Override
+    public List<Right> findRightByRoleId(Integer rId, Integer pId) {
+        return rightMapper.findRightByRoleId(rId,pId);
     }
 }

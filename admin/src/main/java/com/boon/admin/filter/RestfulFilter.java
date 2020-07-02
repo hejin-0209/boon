@@ -76,6 +76,12 @@ public class RestfulFilter extends UserFilter {
         return loginToken;
     }
 
+    public static String getSno(ServletRequest request){
+        HttpServletRequest httpServletRequest = WebUtils.toHttp(request);
+        String sno = httpServletRequest.getHeader(UserConstants.LOGIN_USER);
+        return sno;
+    }
+
     @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
         String loginToken = getToken(request);

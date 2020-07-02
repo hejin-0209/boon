@@ -1,10 +1,13 @@
 package com.boon.admin.service;
 
+import com.boon.admin.common.vo.Result;
 import com.boon.pojo.User;
 import com.boon.user.result.JsonResult;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.Set;
 
@@ -120,5 +123,12 @@ public interface IUserService {
     @RequestMapping(value = "boon/user-proxy/user/findRoleNameByUserSno",method = RequestMethod.POST)
     Set<String> findRoleNameByUserSno(@RequestBody User user);
 
+    @RequestMapping(value = "boon/user-proxy/user/findAdminCount",method = RequestMethod.GET)
+    Integer findAdminCount();
 
+    @RequestMapping(value = "boon/user-proxy/user/bulkImport",method = RequestMethod.POST)
+    Integer bulkImport(@PathVariable(value = "fileName") String fileName) throws Exception ;
+
+    @RequestMapping(value = "boon/user-proxy/user/uploadPhoto",method = RequestMethod.POST)
+    boolean uploadPhoto(@RequestBody User user);
 }

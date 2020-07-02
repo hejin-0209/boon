@@ -1,9 +1,12 @@
 package com.boon.admin.controller;
 
+import com.boon.admin.annotation.LogAnnotation;
 import com.boon.admin.service.IMoralService;
 import com.boon.admin.service.IRewardService;
 import com.boon.pojo.Moral;
 import com.boon.pojo.Rewards;
+import io.swagger.annotations.ApiOperation;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +29,10 @@ public class MoralController {
     private IRewardService rewardService;
 
     // 新增思想品德
+    @LogAnnotation
+    @ApiOperation("新增思想品德")
     @PostMapping("addMoral")
+    @RequiresPermissions("/moral/addMoral")
     public boolean addMoral(@RequestBody Moral moral){
         return moralService.addMoral(moral);
     }
@@ -40,11 +46,17 @@ public class MoralController {
     // 将某个同学的思想品德的分查询出来，并折算好
     @GetMapping("convert/{sno}")
     public Double convert(@PathVariable String sno){
+        if(rewardService.findFinalValue(sno,1) == null){
+            return 12.0;
+        }
         return moralService.convert(sno);
     }
 
     // 更新思想品德
+    @LogAnnotation
+    @ApiOperation("更新思想品德")
     @PostMapping("update")
+    @RequiresPermissions("/moral/update")
     public boolean update(@RequestBody Moral moral){
         return moralService.update(moral);
     }
@@ -67,13 +79,19 @@ public class MoralController {
     }
 
     // 删除思想品德
+    @LogAnnotation
+    @ApiOperation("删除思想品德")
     @DeleteMapping("delete/{sno}")
+    @RequiresPermissions("/moral/delete")
     public boolean delete(@PathVariable(value = "sno") String sno){
         return moralService.delete(sno);
     }
 
     // 批量删除
+    @LogAnnotation
+    @ApiOperation("批量删除思想品德")
     @DeleteMapping("delBatch/{snos}")
+    @RequiresPermissions("/moral/delBatch")
     public boolean delBatch(@PathVariable(value = "snos") String[] snos){
         int i = 0;
         for (String sno : snos) {

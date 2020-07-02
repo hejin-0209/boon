@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,10 +31,21 @@ public class HealthTest {
 
     @Test
     public void addHealth(){
+        ArrayList<String> list = new ArrayList<>();
+        list.add("2016901127");
+        list.add("2016901128");
+        list.add("2016901130");
+        list.add("2016901136");
+        list.add("2016901141");
+        list.add("2016901143");
+        list.add("2016901148");
+        list.add("2016901150");
+        list.add("2016901134");
         Health health = new Health();
-        health.setSno("2016901138");
-        boolean b = healthService.addHealth(health);
-        System.out.println(b);
+        for (String s : list) {
+            health.setSno(s);
+            boolean b = healthService.addHealth(health);
+        }
     }
 
     @Test

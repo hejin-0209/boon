@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Right {
 
-  private long id;            // 权限id
+  private Integer id;            // 权限id
   private String name;        // 权限名字
-  private long parentId;      // 权限父类
+  private Integer parentId;      // 权限父类
   private String url;         // 权限链接
   /**
    * 1： 菜单    2：按钮

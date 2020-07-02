@@ -1,6 +1,7 @@
 package com.boon.admin.service;
 
 import com.boon.pojo.Course;
+import com.boon.pojo.vo.FileDto;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -71,4 +72,7 @@ public interface ICourseService {
      */
     @RequestMapping(value = "boon/score-proxy/course/delBatch/{ids}",method = RequestMethod.POST)
     boolean delBatch(@PathVariable(value = "ids") int[] ids);
+
+    @RequestMapping(value = "boon/score-proxy/course/bulkImport",method = RequestMethod.POST)
+    boolean bulkImport(@PathVariable(value = "fileDto") FileDto fileDto);
 }

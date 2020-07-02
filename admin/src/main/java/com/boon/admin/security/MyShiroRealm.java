@@ -46,7 +46,7 @@ public class MyShiroRealm extends AuthorizingRealm {
         }
 
         if (user.getState() != 1) {
-            throw new IncorrectCredentialsException("无效状态，请联系管理员");
+            throw new IncorrectCredentialsException("用户被禁用，请联系管理员");
         }
 
         SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(user, user.getPassword(),

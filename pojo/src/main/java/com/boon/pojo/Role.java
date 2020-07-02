@@ -18,6 +18,7 @@ public class Role implements Serializable {
   private Integer id;          // 角色id  主键
   private String name;         // 角色名字
   private String description;  // 角色的描述
+  private Integer del;         // 删除状态
 
 
 }

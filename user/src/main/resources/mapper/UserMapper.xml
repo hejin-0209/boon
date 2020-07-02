@@ -58,7 +58,7 @@
     </update>
 
     <select id="findAll" resultMap="user">
-        select * from user where del = 0
+        select * from user where del = 0 and sno != 'admin'
     </select>
     <select id="findBySno" resultMap="user">
         select * from user where sno = #{sno}
@@ -68,5 +68,9 @@
     </select>
     <select id="findDelete" resultType="com.boon.pojo.User">
         select * from user where del = 1
+    </select>
+    <select id="findAdminCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM `user` u INNER JOIN user_role ur ON u.sno = ur.user_sno
+        INNER JOIN role r ON ur.role_id = r.id WHERE r.id != 12 AND u.del != 1;
     </select>
 </mapper>

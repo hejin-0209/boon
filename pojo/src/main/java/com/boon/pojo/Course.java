@@ -17,6 +17,7 @@ public class Course  implements Serializable {
 
   private Integer id;     // 课程的id（编号）  主键
   private String name;    // 课程的名字
+  private String term;    // 课程的学期
   private Integer credit; // 课程的学分
   private Integer del = 0;    // 课程的删除状态 1表示删除，其他表示未删除
 }

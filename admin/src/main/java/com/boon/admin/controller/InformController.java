@@ -1,9 +1,12 @@
 package com.boon.admin.controller;
 
+import com.boon.admin.annotation.LogAnnotation;
 import com.boon.admin.service.IInformService;
 import com.boon.pojo.Inform;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +26,10 @@ public class InformController {
     private IInformService informService;
 
     // 增加通知
+    @LogAnnotation
+    @ApiOperation("新增通知")
     @PostMapping("addInform")
+    @RequiresPermissions("/inform/addInform")
     public boolean addInform(@RequestBody Inform inform){
         return informService.addInform(inform);
     }
@@ -48,13 +54,19 @@ public class InformController {
     }
 
     // 更新通知
+    @LogAnnotation
+    @ApiOperation("更新通知")
     @PostMapping("update")
+    @RequiresPermissions("/inform/update")
     public boolean update(@RequestBody Inform inform){
         return informService.update(inform);
     }
 
     // 删除通知
+    @LogAnnotation
+    @ApiOperation("删除通知")
     @GetMapping("delete/{id}")
+    @RequiresPermissions("/inform/delete")
     public boolean delete(@PathVariable Integer id){
         return informService.delete(id);
     }
@@ -66,7 +78,10 @@ public class InformController {
     }
 
     // 批量删除
+    @LogAnnotation
+    @ApiOperation("批量删除通知")
     @DeleteMapping("delBatch/{ids}")
+    @RequiresPermissions("/inform/delBatch")
     public boolean delBatch(@PathVariable("ids") Integer[] ids){
         int i = 0;
         for (Integer id : ids) {

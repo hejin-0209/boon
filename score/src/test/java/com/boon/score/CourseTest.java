@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -29,7 +30,7 @@ public class CourseTest {
 
     @Test
     public void addCourse(){
-        Course course = new Course(002, "office高级应用", 3,0);
+        Course course = new Course(002, "office高级应用","第一学期", 3,0);
 //        System.out.println(courseMapper.addCourse(course));
         System.out.println(courseService.addCourse(course));
     }
@@ -61,5 +62,15 @@ public class CourseTest {
     public void delete(){
         boolean delete = courseService.delete(1);
         System.out.println(delete);
+    }
+
+    @Test
+    public void test1(){
+        DecimalFormat df = new DecimalFormat("#.00");
+        double d = 1.23456789;
+        String s = df.format(d);
+        System.out.println("格式化的是："+s);
+        Double dd = Double.valueOf(s);
+        System.out.println("转换之后的是："+dd);
     }
 }

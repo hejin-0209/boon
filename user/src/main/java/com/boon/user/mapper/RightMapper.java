@@ -2,6 +2,8 @@ package com.boon.user.mapper;
 
 import com.boon.pojo.Right;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Set;
@@ -14,7 +16,10 @@ import java.util.Set;
  */
 @Mapper
 public interface RightMapper {
-    List<Right> findAll();
+
+    List<Right> findAll(@Param("parentId") Integer parentId,@Param("name") String name);
 
     Set<String> findRightByUserSno(String userSno);
+
+    List<Right> findRightByRoleId(@Param("roleId") Integer roleId,@Param("parentId") Integer parentId);
 }

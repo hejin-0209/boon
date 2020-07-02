@@ -25,4 +25,7 @@ public interface UserMapper {
     Integer findCount();
 
     List<User> findDelete();
+
+    Integer findAdminCount();
+
 }

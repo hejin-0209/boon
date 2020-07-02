@@ -7,14 +7,145 @@
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="description" column="description"/>
+        <result property="del" column="del"/>
     </resultMap>
 
+    <resultMap id="roleVo" type="com.boon.pojo.vo.RoleVo">
+        <id property="id" column="id"/>
+        <result property="userSno" column="user_sno"/>
+        <result property="userName" column="user_name"/>
+        <result property="userPhone" column="user_phone"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+        <result property="createTime" column="create_time"/>
+        <result property="roleId" column="roleId"/>
+        <result property="del" column="del"/>
+
+    </resultMap>
+
+    <resultMap id="userRole" type="com.boon.pojo.UserRole">
+        <id property="id" column="id"/>
+        <result property="userSno" column="user_sno"/>
+        <result property="roleId" column="role_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="del" column="del"/>
+    </resultMap>
+    <!--给角色分配权限-->
+    <insert id="addRoleRight">
+        insert into role_right values(null,#{roleId},#{rightId})
+    </insert>
+
+    <!--给用户分配权限-->
+    <insert id="addAdmin">
+        insert into user_role values (null,#{userSno},#{roleId},now(),0)
+    </insert>
+    <insert id="addRole">
+        insert into role values (null ,#{name},#{description},0)
+    </insert>
+    <update id="updateAdmin">
+        update user_role
+        <set>
+            <if test="userSno != null and userSno !=''">
+                user_sno = #{userSno},
+            </if>
+            <if test="roleId != null">
+                role_id = #{roleId},
+            </if>
+            <if test="del != null and del != ''">
+                del = #{del},
+            </if>
+            create_time = now()
+        </set>
+        where id = #{id}
+    </update>
+    <update id="update">
+        update role
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="del != null">
+                del = #{del}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--根据用户学号查找角色名-->
     <select id="findRoleNameByUserSno" resultType="java.lang.String">
         SELECT r.name FROM (user_role ur LEFT JOIN role r ON r.id = ur.role_id)
             LEFT JOIN user u ON ur.user_sno = u.sno WHERE u.sno = #{userSno}
     </select>
+
+    <!--查询所有的角色-->
     <select id="findAll" resultMap="role">
         select * from role
     </select>
+
+    <!--查询所有存在的管理员-->
+    <select id="findAdmin" resultMap="roleVo">
+        SELECT ur.* ,r.name,r.description,u.`name` user_name,u.phone user_phone FROM
+         role r LEFT JOIN user_role ur ON r.id = ur.role_id LEFT JOIN `user` u ON ur.user_sno = u.sno
+         WHERE r.name != '普通同学' AND u.del != 1 AND u.state = 1 AND ur.del != 1 AND r.del != 1
+        <if test="name != null and name != ''">
+            and u.name = CONCAT(CONCAT('%',#{name}),'%')
+        </if>
+        <if test="sno != null and sno != ''">
+            and ur.user_sno = CONCAT(CONCAT('%',#{sno}),'%')
+        </if>
+        <if test="roleName != null and roleName != ''">
+            and r.name LIKE CONCAT(CONCAT('%',#{roleName}),'%')   /*根据标题模糊查询，concat用于拼接字符创串*/
+        </if>
+        <if test="startTime != null">
+            and UNIX_TIMESTAMP(ur.create_time) &gt; UNIX_TIMESTAMP(#{startTime})
+        </if>
+        <if test="endTime != null">
+            and UNIX_TIMESTAMP(ur.create_time) &lt; UNIX_TIMESTAMP(#{endTime})
+        </if>
+          ORDER BY ur.id
+    </select>
+
+    <!--查看角色是否在使用-->
+    <select id="roleIsExist" resultMap="userRole">
+        select * from user_role where  role_id = #{roleId}
+    </select>
+    <select id="findAdminById" resultMap="userRole">
+        select * from user_role where id = #{id}
+    </select>
+    <select id="findAdminBySno" resultMap="userRole">
+        select * from user_role where user_sno = #{sno}
+    </select>
+    <select id="findRightByRoleName" resultType="com.boon.pojo.Right">
+        SELECT DISTINCT ri.id ,ri.`name`,ri.parent_id parentId from role r INNER JOIN role_right rr ON r.id = rr.role_id
+         INNER JOIN `right` ri ON rr.right_id = ri.id WHERE 1 = 1
+         <if test="roleName != null and roleName != ''">
+             and r.name LIKE CONCAT(CONCAT('%',#{roleName}),'%')
+         </if>
+        <if test="roleId != null">
+            and r.id = #{roleId}
+        </if>
+    </select>
+    <select id="findRoleByName" resultMap="role">
+        select * from role where del != 1
+        <if test="roleName != null and roleName != ''">
+            and name = #{roleName}
+        </if>
+    </select>
+    <select id="roleIsFind" resultType="com.boon.pojo.Role">
+        select * from role where del = 0
+        <if test="roleId != null">
+            and id = #{roleId}
+        </if>
+        <if test="name != null and name != ''">
+            and name = #{name}
+        </if>
+    </select>
+    <select id="findRole" resultMap="role">
+        select * from role where id = #{roleId}
+    </select>
+
 
 </mapper>

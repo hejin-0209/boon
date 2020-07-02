@@ -6,6 +6,7 @@ import com.boon.score.service.ScoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -42,17 +43,25 @@ public class ScoreServiceImpl implements ScoreService {
 
     @Override
     public Integer findCreditBySno(String sno) {
-        return scoreMapper.findCreditBySno(sno);
+        Integer credit = scoreMapper.findCreditBySno(sno);
+        if(credit == null){
+            return 0;
+        }
+        return credit;
     }
 
     @Override
     public Integer findLearnCreditBySno(String sno) {
-        return scoreMapper.findLearnCreditBySno(sno);
+        Integer learnCredit = scoreMapper.findLearnCreditBySno(sno);
+        if(learnCredit == null){
+            return 0;
+        }
+        return learnCredit;
     }
 
     @Override
     public Integer findTotalBySno(String sno) {
-        return scoreMapper.findTotalBySno(sno);
+         return scoreMapper.findTotalBySno(sno);
     }
 
     @Override

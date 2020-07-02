@@ -2,6 +2,7 @@ package com.boon.score.mapper;
 
 import com.boon.pojo.Course;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 

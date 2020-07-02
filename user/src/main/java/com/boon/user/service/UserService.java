@@ -2,6 +2,7 @@ package com.boon.user.service;
 
 import com.boon.pojo.User;
 import com.boon.user.result.JsonResult;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Set;
@@ -53,4 +54,9 @@ public interface UserService {
      * @return 用户权限
      */
     Set<String> findRightByUserSno(String userSno);
+
+
+    Integer findAdminCount();
+
+    boolean uploadPhoto(User user);
 }

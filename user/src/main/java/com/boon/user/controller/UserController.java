@@ -7,9 +7,13 @@ import com.boon.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
-import org.apache.shiro.crypto.hash.SimpleHash;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Set;
@@ -43,8 +47,6 @@ public class  UserController {
     @ApiOperation(value = "添加一个用户",notes = "用户的信息可由表导入，也可以在后台管理中输入")
     public boolean addUser(@RequestBody User user){
         System.out.println("需要增加的用户是:"+user);
-        user.setState(1);
-        user.setDel(0);
         return userService.addUser(user);
     }
 
@@ -129,6 +131,53 @@ public class  UserController {
     @PostMapping("findRoleNameByUserSno")
     public Set<String> findRoleNameByUserSno(@RequestBody User user){
         return roleService.findRoleNameByUserSno(user.getSno());
+    }
+
+    /*获取管理员的数量*/
+    @ApiOperation(value = "获取管理员的数量")
+    @GetMapping("findAdminCount")
+    public Integer findAdminCount(){
+        return userService.findAdminCount();
+    }
+
+    /*批量导入用户*/
+    @PostMapping("bulkImport")
+    public Integer bulkImport(MultipartFile file) throws  Exception{
+        System.out.println("课程："+file);
+        XSSFWorkbook workbook = new XSSFWorkbook(file.getInputStream());//创建Excel,读取文件内容
+        //读取文件第一个sheet文件
+        XSSFSheet sheet = workbook.getSheetAt(0);//通过下标获取文件，第一页
+        int firstRowNum = 1; // 开始读取数据的行数
+        //获取sheet中最后一行行号
+        int lastRowNum = sheet.getLastRowNum()+1;
+        User user = new User();
+        int x = 0;      // 计时器
+        for (int i = firstRowNum; i < lastRowNum; i++) {
+                    XSSFRow row = sheet.getRow(i);
+                    //获取行内单元格号
+                    int lastCellNum = row.getLastCellNum();
+                    for (int j = 0; j < lastCellNum; j+=2) {
+                        Cell cell = row.getCell(j);
+                        Cell cell1 = row.getCell(j+1);
+                        cell.setCellType(Cell.CELL_TYPE_STRING);
+                        user.setSno(cell.getStringCellValue());
+                        user.setName(cell1.getStringCellValue());
+                    }
+                    boolean b = userService.addUser(user);
+                    if (b){
+                x ++;
+            }
+        }
+        if (lastRowNum == x+1){
+            return 1;
+        }
+        return 0;
+    }
+
+    @PostMapping("uploadPhoto")
+    public boolean uploadPhoto(@RequestBody User user){
+        System.out.println("需要修改头像的用户是："+user.getSno());
+        return userService.uploadPhoto(user);
     }
 
 }

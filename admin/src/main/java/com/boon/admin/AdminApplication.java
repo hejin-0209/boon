@@ -7,7 +7,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})  当没有指定数据源的时候用这个注解
+@SpringBootApplication
 @EnableFeignClients
 @EnableDiscoveryClient
 public class AdminApplication {

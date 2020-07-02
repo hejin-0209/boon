@@ -1,8 +1,11 @@
 package com.boon.admin.controller;
 
+import com.boon.admin.annotation.LogAnnotation;
 import com.boon.admin.service.IRewardService;
 import com.boon.pojo.Rewards;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.ApiOperation;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +27,10 @@ public class RewardController {
     private IRewardService rewardService;
 
     // 新增一个奖惩
+    @LogAnnotation
+    @ApiOperation("新增奖惩")
     @PostMapping("addReward")
+    @RequiresPermissions("/reward/addReward")
     public boolean addReward(@RequestBody Rewards rewards){
         return rewardService.addReward(rewards);
     }
@@ -48,7 +54,10 @@ public class RewardController {
     }
 
     // 更新奖惩情况
+    @LogAnnotation
+    @ApiOperation("更新奖惩情况")
     @PostMapping("update")
+    @RequiresPermissions("/reward/update")
     public boolean update(@RequestBody Rewards rewards){
         return rewardService.update(rewards);
     }

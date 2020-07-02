@@ -7,6 +7,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class UserUtil {
@@ -37,5 +38,16 @@ public class UserUtil {
 		Session session = currentUser.getSession();
 
 		return session;
+	}
+
+	public static boolean isChinese(String input){
+		return input.matches("^[\u4e00-\u9fa5]+$");
+	}
+
+
+	public static Double trim(Double num){
+		DecimalFormat df = new DecimalFormat("#.00");
+		String s = df.format(num);
+		return Double.valueOf(s);
 	}
 }

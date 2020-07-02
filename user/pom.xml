@@ -33,6 +33,19 @@
             <version>2.1.1</version>
         </dependency>
 
+        <!-- POI批量导入数据的依赖 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <!--apache的io处理-->
+        <dependency>
+            <groupId>org.apache.directory.studio</groupId>
+            <artifactId>org.apache.commons.io</artifactId>
+            <version>2.4</version>
+        </dependency>
+
         <!--这里是消费者需要导入的包-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -113,6 +126,12 @@
             <groupId>com.boon</groupId>
             <artifactId>pojo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.tobato</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>1.26.5</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

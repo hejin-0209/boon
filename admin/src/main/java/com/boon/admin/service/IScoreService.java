@@ -109,4 +109,7 @@ public interface IScoreService {
      */
     @RequestMapping(value = "boon/score-proxy/score/delete/{id}",method = RequestMethod.DELETE)
     boolean delete(@PathVariable(value = "id") Integer id);
+
+    @RequestMapping(value = "boon/score-proxy/score/weightedScore/{sno}",method = RequestMethod.GET)
+    Double weightedScore(@PathVariable(value = "sno") String sno);
 }

@@ -63,7 +63,7 @@ public class ScoreTest {
 
     @Test
     public void findCreditBySno(){
-        Integer creditBySno = scoreMapper.findCreditBySno("2016901133");
+        Integer creditBySno = scoreMapper.findCreditBySno("2016901136");
         System.out.println(creditBySno);
     }
 

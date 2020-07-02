@@ -38,7 +38,7 @@ public class Swagger2 {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("boon的接口文档 -- 广告接口")
+                .title("boon的接口文档 -- 用户接口")
                 .description("本接口由何劲完成")
                 .termsOfServiceUrl("http://www.baidu.com")
                 .contact("何劲")

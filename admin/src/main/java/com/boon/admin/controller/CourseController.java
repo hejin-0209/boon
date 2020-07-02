@@ -1,9 +1,14 @@
 package com.boon.admin.controller;
 
+import com.boon.admin.annotation.LogAnnotation;
 import com.boon.admin.service.ICourseService;
 import com.boon.pojo.Course;
+import com.boon.pojo.vo.FileDto;
+import io.swagger.annotations.ApiOperation;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -21,7 +26,10 @@ public class CourseController {
     private ICourseService courseService;
 
     /* 课程的增加 */
+    @LogAnnotation
+    @ApiOperation("课程的新增")
     @PostMapping("addCourse")
+    @RequiresPermissions("/course/addCourse")
     public boolean addCourse(@RequestBody Course course){
         return courseService.addCourse(course);
     }
@@ -39,13 +47,19 @@ public class CourseController {
     }
 
     /* 修改课程的信息 */
+    @LogAnnotation
+    @ApiOperation("课程的修改")
     @PostMapping("update")
+    @RequiresPermissions("/course/update")
     public boolean update(@RequestBody Course course){
         return courseService.update(course);
     }
 
     /* 删除一个课程 */
+    @LogAnnotation
+    @ApiOperation("删除课程")
     @DeleteMapping("delete/{id}")
+    @RequiresPermissions("/course/delete")
     public boolean delete(@PathVariable int id){
         return courseService.delete(id);
     }
@@ -57,8 +71,23 @@ public class CourseController {
     }
 
     /* 批量删除课程 */
+    @LogAnnotation
+    @ApiOperation("批量删除课程")
     @PostMapping("delBatch/{ids}")
+    @RequiresPermissions("/course/delBatch")
     public boolean delBatch(@PathVariable(value = "ids") int[] ids){
         return courseService.delBatch(ids);
+    }
+
+    /*课程的新增*/
+    @PostMapping("bulkImport")
+    @RequiresPermissions("/course/addCourse")
+    @LogAnnotation
+    @ApiOperation("课程的新增")
+    public boolean bulkImport(MultipartFile file) throws Exception{
+
+        FileDto fileDto = new FileDto();
+        fileDto.setInputStream(file.getInputStream());
+        return courseService.bulkImport(fileDto);
     }
 }

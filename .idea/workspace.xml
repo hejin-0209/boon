@@ -2,42 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4a16f17-612f-4833-9c4a-fc73e60e5f26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/annotation/LogAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/ResponseInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/enums/ResultStatusCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/vo/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/EhCacheConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/ShiroConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/constants/UserConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CommonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/LogoutFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/RestfulFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/MyShiroRealm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/TokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/EhCacheTokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/RedisTokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/MD5Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/SpringUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/UserUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/ehcache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/mapper/RightMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/mapper/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/result/JsonResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/result/RightResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/result/RoleResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/RightService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RightServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/RightMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/caches/shiro-ehcache/login_user_tokens.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/caches/shiro-ehcache/login_user_tokens.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/caches/shiro-ehcache/shiro-active%0053ession%0043ache.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/caches/shiro-ehcache/shiro-active%0053ession%0043ache.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/advice/ExceptionHandlerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/advice/LogAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/LogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IAdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/LogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/LogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/PageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/BaiDuApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/Fds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/rdius.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/snCal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boon1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caches/shiro-ehcache/.ehcache-diskstore.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caches/shiro-ehcache/login_user_tokens.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caches/shiro-ehcache/org%002eapache%002eshiro%002erealm%002etext%002e%0050roperties%0052ealm-0-accounts.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caches/shiro-ehcache/shiro-active%0053ession%0043ache.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info.text" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Logs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/RoleRight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/vo/FileDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/vo/JsonResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/vo/RightDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/vo/RoleDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/vo/RoleVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/target/classes/META-INF/pojo.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Logs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/RoleRight.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/UserRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/vo/FileDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/vo/JsonResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/vo/RightDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/vo/RoleDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/vo/RoleVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/score/src/test/java/com/boon/score/TreeDirectory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/utils/FDfsUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/utils/MD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/test/java/com/boon/user/FDfsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/3754acfb-304a-46d4-9f84-0342baa2357f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3754acfb-304a-46d4-9f84-0342baa2357f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/AdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/enums/ResultStatusCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/enums/ResultStatusCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CapacityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CapacityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/FeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/FeeController.java" afterDir="false" />
@@ -48,94 +66,53 @@
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/ScoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/TypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICapacityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICapacityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/LogoutFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/LogoutFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/RestfulFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/RestfulFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/MyShiroRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/MyShiroRealm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IFeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IFeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IHealthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IHealthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IInformService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IInformService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IMoralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IMoralService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IRewardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IRewardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IScoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ITypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ITypeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/UserUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/AdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/AdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/controller/FeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/controller/FeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/mapper/FeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/mapper/FeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/service/FeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/service/FeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/service/impl/FeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/service/impl/FeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_fee/src/main/resources/mapper/FeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/class_fee/src/main/resources/mapper/FeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_fee/src/test/java/com/boon/Fee/FeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/class_fee/src/test/java/com/boon/Fee/FeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/controller/InformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/controller/InformController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/mapper/InformMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/mapper/InformMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/service/InformService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/service/InformService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/service/impl/InformServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/inform/src/main/java/com/boon/inform/service/impl/InformServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inform/src/main/resources/mapper/InformMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inform/src/main/resources/mapper/InformMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inform/src/test/java/com/boon/inform/InformTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inform/src/test/java/com/boon/inform/InformTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Capacity.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Capacity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/ClassFee.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/ClassFee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Health.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Inform.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Inform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Moral.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Moral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Rewards.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Rewards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boon.sql" beforeDir="false" afterPath="$PROJECT_DIR$/boon.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Comprehensive.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Comprehensive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Right.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Right.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Capacity.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Capacity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/ClassFee.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/ClassFee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Health.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Health.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Inform.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Inform.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Moral.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Moral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Rewards.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Rewards.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Comprehensive.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Comprehensive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Course.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Right.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Right.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Score.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Score.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pojo/target/test-classes/META-INF/pojo.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/CapacityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/CapacityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/HealthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/HealthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/MoralController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/MoralController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/RewardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/RewardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/TypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/CapacityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/CapacityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/HealthMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/HealthMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/MoralMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/MoralMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/RewardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/mapper/RewardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/CapacityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/CapacityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/HealthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/HealthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/MoralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/MoralService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/RewardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/RewardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/TypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/HealthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/HealthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/MoralServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/MoralServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/RewardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/RewardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/TypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/pojo/target/classes/com/boon/pojo/Role.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/CapacityMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/CapacityMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/HealthMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/HealthMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/MoralMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/MoralMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/RewardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/RewardMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/CapacityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/CapacityTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/HealthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/HealthTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/MoralTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/MoralTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/RewardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/RewardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/TypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/TypeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/score/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/mapper/CourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/mapper/ScoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/mapper/ScoreMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/ScoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/CourseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score/src/main/resources/mapper/CourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/resources/mapper/CourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score/src/main/resources/mapper/ScoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/main/resources/mapper/ScoreMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score/src/test/java/com/boon/score/CourseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/test/java/com/boon/score/CourseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/config/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/config/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/mapper/RightMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/mapper/RightMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/mapper/RoleMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/RightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/RightService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/RoleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RightServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RoleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/RightMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/RightMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/test/java/com/boon/user/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/test/java/com/boon/user/UserTest.java" afterDir="false" />
     </list>
@@ -185,6 +162,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="boon: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="boon" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="boon: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="moral: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -195,120 +179,7 @@
     <favorites_list name="boon" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/RedisConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/EhCacheConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/ShiroConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="122" column="36" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/constants/UserConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CommonController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#762#763#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-58">
-              <caret line="137" column="45" lean-forward="true" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2543#2544#0" expanded="true" />
-                <element signature="e#2594#2595#0" expanded="true" />
-                <element signature="e#4758#4759#0" expanded="true" />
-                <element signature="e#4806#4807#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/LogoutFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/FastClientImporter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/vo/Result.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#674#675#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/AppConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -322,8 +193,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>moralService</find>
-      <find>IHealthService</find>
       <find>IMoralService</find>
       <find>IRewardService</find>
       <find>IScoreService</find>
@@ -346,6 +215,14 @@
       <find>SecurityManager</find>
       <find>securityManager</find>
       <find>logout</find>
+      <find>admi</find>
+      <find>sn</find>
+      <find>i</find>
+      <find>findRight</find>
+      <find>findAll</find>
+      <find>findRights</find>
+      <find>moralReward</find>
+      <find>final</find>
     </findStrings>
     <replaceStrings>
       <replace>healthService</replace>
@@ -363,91 +240,94 @@
       <replace>i</replace>
       <replace />
       <replace>user</replace>
+      <replace>l</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/user/src/test/java/com/boon/user/UserTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/CapacityTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/RewardTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/TypeTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/HealthTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/MoralTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RoleServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/UserServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RightServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/LogServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/inform/src/main/java/com/boon/inform/service/impl/InformServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/user/src/test/java/com/boon/user/UserTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/inform/src/test/java/com/boon/inform/InformTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/FeeController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/RewardServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/HealthServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/TypeServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/TypeTest.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/CapacityServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/service/impl/FeeServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/FeeController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/RewardTest.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/CourseServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/inform/src/test/java/com/boon/inform/InformTest.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/CapacityTest.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/score/src/test/java/com/boon/score/CourseTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/MoralServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/TypeServiceImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/class_fee/src/main/java/com/boon/class_fee/service/impl/FeeServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/controller/RewardController.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/class_fee/src/test/java/com/boon/Fee/FeeTest.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/UserServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/MoralServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/HealthTest.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RightServiceImpl.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/MoralTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/score/src/test/java/com/boon/score/CourseTest.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/ShiroLifecycleBeanPostProcessorConfig.java" />
-        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/ShiroUserFilter.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/Exception/AuthException.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/ShiroAuthFilter.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/ShiroAutoAuthFilter.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/ShiroTool.java" />
-        <option value="$PROJECT_DIR$/user/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/SessionConfig.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/Exception/AdviceController.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/CredentialsMatcher.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/SessionControlFilter.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/vo/Result.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/Exception/ExceptionAdvice.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/UserToken.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/LoginType.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/ShiroRealm.java" />
-        <option value="$PROJECT_DIR$/user/src/test/java/com/boon/user/UserTest.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/MySessionManager.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/RedisSessionDAO.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/UserRealm.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/constants/UserConstants.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/UserUtil.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/RedisConfig.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/ResultFilter.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/SpringUtil.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/TokenManager.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/ResponseInfo.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/RestfulFilter.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/EhCacheConfig.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/annotation/LogAnnotation.java" />
         <option value="$PROJECT_DIR$/admin/pom.xml" />
-        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IUserService.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/MD5Util.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/EhCacheTokenManager.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CommonController.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/MyShiroRealm.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/CorsAuthenticationFilter.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/ShiroWebFilter.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/Token.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/mapper/RoleMapper.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/utils/FDfsUtils.java" />
+        <option value="$PROJECT_DIR$/user/src/test/java/com/boon/user/FDfsTest.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/mapper/CourseMapper.java" />
+        <option value="$PROJECT_DIR$/user/pom.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/config/AppConfig.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/config/Swagger2.java" />
+        <option value="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/vo/FileDto.java" />
+        <option value="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/Fds.java" />
         <option value="$PROJECT_DIR$/admin/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IUserService.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/UserService.java" />
+        <option value="$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Course.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CourseController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/ICourseService.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/CourseService.java" />
+        <option value="$PROJECT_DIR$/score/pom.xml" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/CourseController.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/config/AppConfig.java" />
+        <option value="$PROJECT_DIR$/score/src/main/resources/mapper/CourseMapper.xml" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/RestfulFilter.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/CapacityMapper.xml" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/resources/mapper/HealthMapper.xml" />
+        <option value="$PROJECT_DIR$/score/src/test/java/com/boon/score/CourseTest.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IScoreService.java" />
+        <option value="$PROJECT_DIR$/score/src/test/java/com/boon/score/ScoreTest.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/service/impl/ScoreServiceImpl.java" />
+        <option value="$PROJECT_DIR$/score/src/main/java/com/boon/score/controller/ScoreController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/UserUtil.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/MoralServiceImpl.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/MoralController.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/main/java/com/boon/reward_and_punishment/service/impl/HealthServiceImpl.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/HealthController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CapacityController.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/MoralTest.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/HealthTest.java" />
+        <option value="$PROJECT_DIR$/reward_and_punishment/src/test/java/com/boon/reward/CapacityTest.java" />
         <option value="$PROJECT_DIR$/admin/src/test/java/com/boon/admin/AdminTest.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/RedisTokenManager.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/SessionManager.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/Page.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/PageUtils.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/ScoreController.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/constants/UserConstants.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/Token.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/enums/ResultStatusCode.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/vo/Result.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/LogoutFilter.java" />
+        <option value="$PROJECT_DIR$/user/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/user/src/test/java/com/boon/user/UserTest.java" />
       </list>
     </option>
   </component>
@@ -470,11 +350,11 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="admin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="user" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="admin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="user" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
@@ -482,10 +362,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="976" />
-    <option name="height" value="1096" />
+    <option name="x" value="1190" />
+    <option name="width" value="1220" />
+    <option name="height" value="1360" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -495,6 +374,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -503,331 +383,15 @@
               <item name="boon" type="b2602c69:ProjectViewProjectNode" />
               <item name="boon" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="confing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka_server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boon" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -839,7 +403,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="D:/项目备份/boon（1.1）" />
+    <property name="last_opened_file_path" value="F:/Work/SVN" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -849,32 +413,32 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.boon.admin.security" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.boon.user" />
       <recent name="com.boon.admin" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.boon.admin.security" />
-      <recent name="com.boon.admin.controller" />
-      <recent name="com.boon.admin.common.enums" />
-      <recent name="com.boon.admin.common.vo" />
-      <recent name="com.boon.admin.annotation" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git_repository\boon\admin\src\main\java\com\boon\admin" />
       <recent name="D:\git_repository\boon\admin\src\main\resources" />
       <recent name="D:\git_repository\boon\admin\src\main\java\com\boon\admin\service\impl" />
       <recent name="D:\git_repository\boon\admin\src\main\java\com\boon\admin\vo" />
       <recent name="D:\git_repository\boon\admin\src\main\java\com\boon\admin\utils" />
-      <recent name="D:\git_repository\boon\admin\src\main\java\com\boon\admin\controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.boon.score.config" />
+      <recent name="com.boon.user.config" />
+      <recent name="com.boon.pojo.vo" />
+      <recent name="com.boon.user.utils" />
+      <recent name="com.boon.admin.security" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.boon.admin.security" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -893,10 +457,10 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.17396061" />
+    <option name="contentProportion" value="0.19256018" />
   </component>
-  <component name="RunManager" selected="JUnit.AdminTest.test3">
-    <configuration name="AdminTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
+    <configuration name="AdminTest.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="admin" />
       <extension name="coverage">
         <pattern>
@@ -906,45 +470,61 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.boon.admin" />
       <option name="MAIN_CLASS_NAME" value="com.boon.admin.AdminTest" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="METHOD_NAME" value="test5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdminTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="admin" />
+    <configuration name="CapacityTest.addCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reward_and_punishment" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.boon.admin.*" />
+          <option name="PATTERN" value="com.boon.reward.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.boon.admin" />
-      <option name="MAIN_CLASS_NAME" value="com.boon.admin.AdminTest" />
-      <option name="METHOD_NAME" value="test3" />
+      <option name="PACKAGE_NAME" value="com.boon.reward" />
+      <option name="MAIN_CLASS_NAME" value="com.boon.reward.CapacityTest" />
+      <option name="METHOD_NAME" value="addCapacity" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FeeTest.findMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="class_fee" />
+    <configuration name="HealthTest.addHealth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reward_and_punishment" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.boon.Fee.*" />
+          <option name="PATTERN" value="com.boon.reward.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.boon.Fee" />
-      <option name="MAIN_CLASS_NAME" value="com.boon.Fee.FeeTest" />
-      <option name="METHOD_NAME" value="findMoney" />
+      <option name="PACKAGE_NAME" value="com.boon.reward" />
+      <option name="MAIN_CLASS_NAME" value="com.boon.reward.HealthTest" />
+      <option name="METHOD_NAME" value="addHealth" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MoralTest.addMoral" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reward_and_punishment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boon.reward.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.boon.reward" />
+      <option name="MAIN_CLASS_NAME" value="com.boon.reward.MoralTest" />
+      <option name="METHOD_NAME" value="addMoral" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user" />
       <extension name="coverage">
         <pattern>
@@ -954,23 +534,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.boon.user" />
       <option name="MAIN_CLASS_NAME" value="com.boon.user.UserTest" />
-      <option name="METHOD_NAME" value="findAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserTest.findAll1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.boon.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.boon.user" />
-      <option name="MAIN_CLASS_NAME" value="com.boon.user.UserTest" />
-      <option name="METHOD_NAME" value="findAll1" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -979,6 +543,8 @@
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.boon.admin.AdminApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx128m -Xms128m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -986,6 +552,8 @@
     <configuration name="ClassFeeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="class_fee" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.boon.class_fee.ClassFeeApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx128m -Xms128m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -993,6 +561,8 @@
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eureka_server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.boon.eureka_server.EurekaServerApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx128m -Xms128m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1000,6 +570,8 @@
     <configuration name="InformApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="inform" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.boon.inform.InformApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx128m -Xms128m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1007,6 +579,8 @@
     <configuration name="RewardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="reward_and_punishment" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.boon.reward_and_punishment.RewardApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx128m -Xms128m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1014,6 +588,8 @@
     <configuration name="ScoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="score" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.boon.score.ScoreApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx128m -Xms128m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1021,6 +597,8 @@
     <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="user" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.boon.user.UserApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx128m -Xms128m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1028,37 +606,39 @@
     <configuration name="ZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="zuul_server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.boon.zuul_server.ZuulServerApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx128m -Xms128m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FeeTest.findMoney" />
-      <item itemvalue="JUnit.AdminTest.test2" />
-      <item itemvalue="JUnit.UserTest.findAll" />
-      <item itemvalue="JUnit.UserTest.findAll1" />
-      <item itemvalue="JUnit.AdminTest.test3" />
+      <item itemvalue="JUnit.MoralTest.addMoral" />
+      <item itemvalue="JUnit.HealthTest.addHealth" />
+      <item itemvalue="JUnit.CapacityTest.addCapacity" />
+      <item itemvalue="JUnit.AdminTest.test5" />
+      <item itemvalue="JUnit.UserTest.test1" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.AdminApplication" />
+      <item itemvalue="Spring Boot.ScoreApplication" />
       <item itemvalue="Spring Boot.ClassFeeApplication" />
       <item itemvalue="Spring Boot.InformApplication" />
       <item itemvalue="Spring Boot.RewardApplication" />
       <item itemvalue="Spring Boot.UserApplication" />
       <item itemvalue="Spring Boot.ZuulServerApplication" />
-      <item itemvalue="Spring Boot.ScoreApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdminTest.test3" />
-        <item itemvalue="JUnit.AdminTest.test2" />
-        <item itemvalue="JUnit.UserTest.findAll1" />
-        <item itemvalue="JUnit.UserTest.findAll" />
-        <item itemvalue="JUnit.FeeTest.findMoney" />
+        <item itemvalue="JUnit.UserTest.test1" />
+        <item itemvalue="JUnit.AdminTest.test5" />
+        <item itemvalue="JUnit.CapacityTest.addCapacity" />
+        <item itemvalue="JUnit.HealthTest.addHealth" />
+        <item itemvalue="JUnit.MoralTest.addMoral" />
       </list>
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\hejin\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -1133,7 +713,62 @@
       <workItem from="1583645150934" duration="12432000" />
       <workItem from="1583671751200" duration="4908000" />
       <workItem from="1583717419335" duration="12890000" />
-      <workItem from="1583809831984" duration="181000" />
+      <workItem from="1583809831984" duration="1690000" />
+      <workItem from="1583831589253" duration="11164000" />
+      <workItem from="1583987313159" duration="21661000" />
+      <workItem from="1584077154099" duration="13007000" />
+      <workItem from="1584244269918" duration="16850000" />
+      <workItem from="1584277480886" duration="287000" />
+      <workItem from="1584320747003" duration="22685000" />
+      <workItem from="1584408957665" duration="9355000" />
+      <workItem from="1584438565450" duration="10594000" />
+      <workItem from="1584504904060" duration="4683000" />
+      <workItem from="1584541093085" duration="5566000" />
+      <workItem from="1584579587756" duration="1735000" />
+      <workItem from="1584595834188" duration="10513000" />
+      <workItem from="1584688742595" duration="5113000" />
+      <workItem from="1584763457305" duration="26413000" />
+      <workItem from="1584893933038" duration="8000" />
+      <workItem from="1584969104709" duration="21000" />
+      <workItem from="1585144625953" duration="4946000" />
+      <workItem from="1585190137208" duration="3086000" />
+      <workItem from="1585227027827" duration="1145000" />
+      <workItem from="1585284974778" duration="2836000" />
+      <workItem from="1585388588745" duration="833000" />
+      <workItem from="1585445906639" duration="16000" />
+      <workItem from="1585751787704" duration="1527000" />
+      <workItem from="1585888656164" duration="1225000" />
+      <workItem from="1585975673653" duration="844000" />
+      <workItem from="1586441228453" duration="122000" />
+      <workItem from="1586670123688" duration="6140000" />
+      <workItem from="1587211259996" duration="1306000" />
+      <workItem from="1587699961493" duration="2973000" />
+      <workItem from="1587886565044" duration="5245000" />
+      <workItem from="1588166560621" duration="595000" />
+      <workItem from="1588691869283" duration="1320000" />
+      <workItem from="1588743786796" duration="1938000" />
+      <workItem from="1588830593115" duration="141000" />
+      <workItem from="1588917696309" duration="2037000" />
+      <workItem from="1588945887141" duration="229000" />
+      <workItem from="1589114852343" duration="2110000" />
+      <workItem from="1589200756883" duration="9909000" />
+      <workItem from="1589246682688" duration="2086000" />
+      <workItem from="1589269998086" duration="6643000" />
+      <workItem from="1589288760861" duration="5378000" />
+      <workItem from="1589342785135" duration="12814000" />
+      <workItem from="1589462600517" duration="692000" />
+      <workItem from="1589882966845" duration="15555000" />
+      <workItem from="1589942343483" duration="21070000" />
+      <workItem from="1589989744931" duration="2043000" />
+      <workItem from="1590022054757" duration="913000" />
+      <workItem from="1590035247409" duration="8793000" />
+      <workItem from="1590051957053" duration="1700000" />
+      <workItem from="1590644235085" duration="1264000" />
+      <workItem from="1591628541204" duration="1672000" />
+      <workItem from="1592209747715" duration="1993000" />
+      <workItem from="1592902087165" duration="862000" />
+      <workItem from="1592902995630" duration="196000" />
+      <workItem from="1593655240857" duration="330000" />
     </task>
     <task id="LOCAL-00001" summary="添加了实体类，将微服务架构搭了起来">
       <created>1577086209989</created>
@@ -1170,43 +805,50 @@
       <option name="project" value="LOCAL" />
       <updated>1581326413618</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="改善了以前的接口，添加了权限控制功能">
+      <created>1583810206083</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583810206083</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 04m 55s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="CourseTest_test1 - 2020.05.20 at 01h 41m 29s.xml">
+      <configuration name="CourseTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 06m 13s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="ScoreTest_findCreditBySno - 2020.05.20 at 02h 03m 47s.xml">
+      <configuration name="ScoreTest.findCreditBySno" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 07m 19s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="MoralTest_addMoral - 2020.05.20 at 11h 19m 27s.xml">
+      <configuration name="MoralTest.addMoral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 08m 32s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="HealthTest_addHealth - 2020.05.20 at 11h 21m 25s.xml">
+      <configuration name="HealthTest.addHealth" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 13m 19s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="CapacityTest_addCapacity - 2020.05.20 at 11h 22m 35s.xml">
+      <configuration name="CapacityTest.addCapacity" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 14m 33s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="AdminTest_test5 - 2020.05.20 at 13h 02m 47s.xml">
+      <configuration name="AdminTest.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 15m 54s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="AdminTest_test5 - 2020.05.20 at 13h 03m 38s.xml">
+      <configuration name="AdminTest.test5" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 17m 02s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="UserTest_test1 - 2020.06.15 at 16h 46m 59s.xml">
+      <configuration name="UserTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 18m 49s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="UserTest_test1 - 2020.06.15 at 16h 47m 20s.xml">
+      <configuration name="UserTest.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AdminTest_test3 - 2020.03.09 at 17h 19m 59s.xml">
-      <configuration name="AdminTest.test3" configurationId="JUnit" />
+    <history-entry file="UserTest_test1 - 2020.06.15 at 16h 47m 40s.xml">
+      <configuration name="UserTest.test1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="439713000" />
+    <option name="totallyTimeSpent" value="735404000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1219,9 +861,46 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.55167174" visible="true" weight="0.23283261" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7846154" visible="true" weight="0.29667383" />
+      <window_info id="Structure" order="1" sideWeight="0.21538462" side_tool="true" weight="0.30161944" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.3375" side_tool="true" weight="0.28165236" />
+      <window_info id="Web" order="7" sideWeight="0.3375" side_tool="true" weight="0.28165236" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.39148936" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30957446" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28723404" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32978722" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32978722" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.26702127" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32978722" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.14468086" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.55531913" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.32978722" />
+      <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.32978722" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.23390558" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.04774678" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3299356" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.55167174" visible="true" weight="0.20225322" />
       <window_info id="Structure" order="1" sideWeight="0.44832826" side_tool="true" weight="0.31169528" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1231,7 +910,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.39148936" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.456383" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22978723" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28723404" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1240,11 +919,11 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.25425532" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.37021276" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.14468086" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.04042553" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.04042553" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1252,11 +931,11 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.16899142" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.29933482" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.020386266" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3299356" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1266,417 +945,393 @@
     <MESSAGE value="加了好多功能" />
     <MESSAGE value="加了管理员服务" />
     <MESSAGE value="做了较多的修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="做了较多的修改" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/inform/src/main/java/com/boon/inform/controller/InformController.java</url>
-          <line>65</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="改善了以前的接口，添加了权限控制功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="改善了以前的接口，添加了权限控制功能" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/UserRealm.java" />
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/AdminApplication.java">
+    <entry file="jar://F:/maven/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.5/tomcat-embed-core-8.5.5-sources.jar!/org/apache/catalina/connector/RequestFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="300">
+          <caret line="552" selection-start-line="552" selection-end-line="552" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/maven/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.5/tomcat-embed-core-8.5.5-sources.jar!/javax/servlet/ServletRequestWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="261" selection-start-line="261" selection-end-line="261" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#7532#7533#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/pom.xml">
+    <entry file="jar://F:/maven/repository/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0.jar!/org/apache/shiro/web/servlet/OncePerRequestFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3256">
-          <caret line="148" column="21" selection-start-line="148" selection-start-column="21" selection-end-line="148" selection-end-column="21" />
+        <state relative-caret-position="148">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://F:/maven/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/util/ByteSource.class">
+    <entry file="jar://F:/maven/repository/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0.jar!/org/apache/shiro/web/servlet/ProxiedFilterChain.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="328">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://F:/maven/repository/org/springframework/spring-webmvc/4.3.3.RELEASE/spring-webmvc-4.3.3.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
+    <entry file="jar://F:/maven/repository/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0.jar!/org/apache/shiro/web/servlet/AbstractShiroFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="972" selection-start-line="972" selection-end-line="972" />
+        <state relative-caret-position="148">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://F:/maven/repository/org/springframework/spring-webmvc/4.3.3.RELEASE/spring-webmvc-4.3.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java">
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/Page.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="834" selection-start-line="834" selection-end-line="834" />
+        <state relative-caret-position="902">
+          <caret line="63" column="72" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/PageUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Comprehensive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://F:/maven/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/UsernamePasswordToken.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#1980#1981#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7-sources.jar!/org/slf4j/impl/StaticLoggerBinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#2315#2316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21-sources.jar!/org/slf4j/LoggerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="391" selection-start-line="391" selection-end-line="391" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/com/netflix/hystrix/hystrix-core/1.5.6/hystrix-core-1.5.6-sources.jar!/com/netflix/hystrix/AbstractCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-          <folding>
-            <element signature="e#4007#4033#0" expanded="true" />
-            <element signature="e#4370#4396#0" expanded="true" />
-            <element signature="e#6350#6368#0" expanded="true" />
-            <element signature="e#6487#6515#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/io/github/openfeign/feign-hystrix/9.3.1/feign-hystrix-9.3.1-sources.jar!/feign/hystrix/HystrixInvocationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
-          <folding>
-            <element signature="e#4009#4017#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/AbstractAuthenticator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/org/springframework/spring-web/4.3.3.RELEASE/spring-web-4.3.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="230" selection-start-line="230" selection-end-line="230" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/mgt/DefaultSecurityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/SecurityUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/ShiroWebFilter.java" />
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/CorsAuthenticationFilter.java" />
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/annotation/LogAnnotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/org/springframework/spring-web/4.3.3.RELEASE/spring-web-4.3.3.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3718">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/MyShiroRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="34" column="84" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/MD5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/RestfulFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/UserUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/SpringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CapacityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/test/java/com/boon/admin/AdminTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/org/apache/shiro/shiro-ehcache/1.4.0/shiro-ehcache-1.4.0.jar!/org/apache/shiro/cache/ehcache/EhCacheManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/EhCacheTokenManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="36" column="83" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/SessionManager.java" />
-    <entry file="jar://F:/maven/repository/org/crazycake/shiro-redis/2.4.2.1-RELEASE/shiro-redis-2.4.2.1-RELEASE.jar!/org/crazycake/shiro/RedisCacheManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/maven/repository/org/springframework/data/spring-data-redis/1.7.3.RELEASE/spring-data-redis-1.7.3.RELEASE.jar!/org/springframework/data/redis/core/RedisTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/RedisTokenManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="27" column="55" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/TokenManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/ehcache.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/ResponseInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/enums/ResultStatusCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/vo/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/EhCacheConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/FastClientImporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="122" column="36" selection-start-line="122" selection-start-column="36" selection-end-line="122" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/constants/UserConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CommonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="137" column="45" lean-forward="true" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2543#2544#0" expanded="true" />
-            <element signature="e#2594#2595#0" expanded="true" />
-            <element signature="e#4758#4759#0" expanded="true" />
-            <element signature="e#4806#4807#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/LogoutFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="173">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/filter/RestfulFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="72" column="53" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/ScoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5060">
+          <caret line="271" column="5" lean-forward="true" selection-start-line="271" selection-start-column="5" selection-end-line="271" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/EhCacheConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/utils/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/annotation/LogAnnotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/enums/ResultStatusCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/vo/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/common/dto/LogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/constants/UserConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/FastClientImporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CommonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/FeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/InformController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2068">
+          <caret line="77" column="25" lean-forward="true" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/TypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/CapacityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/MoralController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1292">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/security/MyShiroRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="68" column="46" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/RightMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pojo/src/main/java/com/boon/pojo/Right.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/ehcache.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/EhCacheTokenManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/service/impl/RedisTokenManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/advice/ExceptionHandlerAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/boon/admin/confing/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1408">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2640">
+          <caret line="140" column="65" selection-start-line="140" selection-start-column="65" selection-end-line="140" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/RightServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/java/com/boon/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/src/test/java/com/boon/user/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1719,6 +1374,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1735,7 +1391,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

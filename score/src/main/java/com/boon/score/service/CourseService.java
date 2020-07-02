@@ -1,6 +1,7 @@
 package com.boon.score.service;
 
 import com.boon.pojo.Course;
+import com.boon.pojo.vo.FileDto;
 
 import java.util.List;
 
@@ -25,4 +26,5 @@ public interface CourseService {
     Integer findCount();
 
     boolean delBatch(int[] ids);
+
 }

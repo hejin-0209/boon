@@ -1,9 +1,12 @@
 package com.boon.admin.controller;
 
+import com.boon.admin.annotation.LogAnnotation;
 import com.boon.admin.service.IFeeService;
 import com.boon.pojo.ClassFee;
 import com.boon.pojo.Rewards;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.ApiOperation;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +26,10 @@ public class FeeController {
     private IFeeService feeService;
 
     //增加班费的管理
+    @LogAnnotation
+    @ApiOperation("新增班费")
     @PostMapping("addFee")
+    @RequiresPermissions("/fee/addFee")
     public boolean addFee(@RequestBody ClassFee fee){
         System.out.println("传进来的班费情况是："+fee);
         return feeService.addFee(fee);
@@ -36,7 +42,10 @@ public class FeeController {
     }
 
     // 班费管理的更新
+    @LogAnnotation
+    @ApiOperation("更新班费")
     @PostMapping("updateFee")
+    @RequiresPermissions("/fee/updateFee")
     public boolean updateFee(ClassFee fee){
         return feeService.updateFee(fee);
     }

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,10 +31,17 @@ public class CapacityTest {
 
     @Test
     public void addCapacity(){
+        ArrayList<String> list = new ArrayList<>();
+        list.add("2016901127");
+        list.add("2016901128");
+        list.add("2016901143");
+        list.add("2016901148");
+        list.add("2016901150");
         Capacity capacity = new Capacity();
-        capacity.setSno("2016901138");
-        boolean b = capacityService.addCapacity(capacity);
-        System.out.println(b);
+        for (String s : list) {
+            capacity.setSno(s);
+            boolean b = capacityService.addCapacity(capacity);
+        }
     }
 
     @Test

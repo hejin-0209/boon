@@ -3,13 +3,6 @@ package com.boon.admin.common.dto;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Restful方式登陆token
- * 
- * @author 小威老师 xiaoweijiagou@163.com
- *
- *         2017年8月4日
- */
 
 public class Token implements Serializable {
 

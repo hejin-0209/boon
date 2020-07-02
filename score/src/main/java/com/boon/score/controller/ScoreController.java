@@ -12,6 +12,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -53,10 +54,10 @@ public class ScoreController {
 
     // 根据id来查成绩
     @GetMapping("findById/{id}")
-    @ApiOperation(value = "根据id来查成绩",notes = "提供所需要查询的id")
+    @ApiOperation(value = "根据id来查成绩", notes = "提供所需要查询的id")
     @ApiImplicitParam(paramType = "path", name = "id", value = "成绩的id",
             required = true, dataType = "Integer")
-    public Score findById(@PathVariable(value = "id") Integer id){
+    public Score findById(@PathVariable(value = "id") Integer id) {
         return scoreService.findById(id);
     }
 
@@ -104,12 +105,22 @@ public class ScoreController {
     public Double weightedScore(@PathVariable String sno) {
         Integer total = scoreService.findTotalBySno(sno);
         Integer credit = scoreService.findLearnCreditBySno(sno);
-        return (double) total / credit;
+        String s = null;
+        if (total == null) {
+            total = 0;
+        }
+        DecimalFormat df = new DecimalFormat("#.00");       // 保留两位小数
+        if (credit != 0) {
+            s = df.format((double) total / credit);
+        } else {
+            return 0.0;
+        }
+        return Double.valueOf(s);
     }
 
     // 成绩和课程的联合查询
     @PostMapping("findScore/{sno}/{courseId}/{minScore}/{maxScore}")
-    @ApiOperation(value = "成绩、课程、用户的多表联查",notes = "所需要的信息要提供")
+    @ApiOperation(value = "成绩、课程、用户的多表联查", notes = "所需要的信息要提供")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path", name = "sno", value = "学生的学号", dataType = "String"),
             @ApiImplicitParam(paramType = "path", name = "courseId", value = "课程号", dataType = "String"),
@@ -121,42 +132,42 @@ public class ScoreController {
         Integer cId = null;
         Integer minSco = null;
         Integer maxSco = null;
-        if ("null".equals(sno)){
+        if ("null".equals(sno)) {
             sno = null;
         }
-        if ("null".equals(courseId)){
+        if ("null".equals(courseId)) {
             cId = null;
-        }else{
+        } else {
             cId = Integer.valueOf(courseId);
         }
-        if ("null".equals(minScore)){
+        if ("null".equals(minScore)) {
             minSco = null;
-        }else{
+        } else {
             minSco = Integer.valueOf(minScore);
         }
-        if ("null".equals(maxScore)){
+        if ("null".equals(maxScore)) {
             maxSco = null;
-        }else{
+        } else {
             maxSco = Integer.valueOf(maxScore);
         }
-        return scoreService.findScore(sno,cId,minSco,maxSco);
+        return scoreService.findScore(sno, cId, minSco, maxSco);
     }
 
     // 批量删除
     @PostMapping("delBatch/{ids}")
-    public boolean delBatch(@PathVariable(value = "ids")int[] ids){
+    public boolean delBatch(@PathVariable(value = "ids") int[] ids) {
         return scoreService.delBatch(ids);
     }
 
     // 更新成绩
     @PostMapping("update")
-    public boolean update(@RequestBody Score score){
+    public boolean update(@RequestBody Score score) {
         return scoreService.update(score);
     }
 
     // 成绩删除
     @DeleteMapping("delete/{id}")
-    public boolean delete(@PathVariable(value = "id") Integer id){
+    public boolean delete(@PathVariable(value = "id") Integer id) {
         return scoreService.delete(id);
     }
 

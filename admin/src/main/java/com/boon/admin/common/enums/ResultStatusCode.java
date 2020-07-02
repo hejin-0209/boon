@@ -17,14 +17,15 @@ public enum ResultStatusCode {
     SYSTEM_ERR(500, "服务器运行异常"),
     NOT_EXIST_USER_OR_ERROR_PWD(10000, "该用户不存在或密码错误"),
     LOGINED_IN(10001, "该用户已登录"),
-    NOT_EXIST_BUSINESS(10002, "该商家不存在"),
     SHIRO_ERROR(10003, "登录异常"),
     UNAUTHO_ERROR(10004, "您没有该权限"),
     UNLOGIN_ERROR(10005,"未登录"),
-    BIND_PHONE(10010, "请绑定手机号"),
     UPLOAD_ERROR(20000, "上传文件异常"),
     INVALID_CAPTCHA(30005, "无效的验证码"),
-    USER_FROZEN(40000, "该用户已被冻结");
+    USER_FROZEN(40000, "该用户已被冻结，请联系管理员！"),
+    USER_NOT_EXIST(40001,"此用户不存在，请您先去添加此用户！"),
+    ROLENAME_EXIST(40003,"角色名已经被使用，请您重新定义一个角色名！"),
+    ROlE_EXIST(40002,"角色已在使用，请您先解除用户权限关系后再重试");
 
     private int code;
     private String msg;

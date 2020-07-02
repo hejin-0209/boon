@@ -11,5 +11,8 @@ import java.util.List;
  * Description:  关于这个类的描述
  */
 public interface RightService {
-    List<Right> findAll();
+    List<Right> findAll(Integer parentId,String name);
+
+    // 根据角色id和权限父类查询权限
+    List<Right> findRightByRoleId(Integer rId, Integer pId);
 }

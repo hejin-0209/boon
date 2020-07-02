@@ -51,12 +51,13 @@
     </select>
 
     <select id="convert" resultType="java.lang.Double">
-        SELECT (proportion*sum) AS `convert` FROM (SELECT DISTINCT proportion FROM health) AS c,
-        (SELECT sum1+sum2 AS sum FROM
-        (SELECT physique+hygiene+exercise+labour AS sum1 FROM health WHERE sno = #{sno}) AS a,
-        (SELECT final_value AS sum2 FROM rewards WHERE id =
-        (SELECT MAX(r.id) FROM rewards r INNER JOIN health h ON r.sno = h.sno WHERE h.sno=#{sno}
-         AND type_id = 2)) AS b) AS d;
+        SELECT (proportion*sum) AS `convert` FROM
+        (SELECT DISTINCT proportion FROM health) as c,
+        (SELECT sum1+sum2 as sum from
+        (SELECT physique+hygiene+exercise+labour AS sum1 FROM health WHERE sno = #{sno}) as a,
+        (select final_value AS sum2 from rewards where id =
+        (select max(r.id) from rewards r INNER JOIN health h ON r.sno = h.sno
+        where h.sno=#{sno} and type_id = 7)) as b) as d;
     </select>
 
     <select id="findHealth" resultMap="health">

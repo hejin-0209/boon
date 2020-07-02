@@ -12,13 +12,27 @@
         <result property="type" column="type"/>
     </resultMap>
     <select id="findAll" resultMap="right">
-        SELECT * from "right"
+        SELECT * FROM `right` where 1 = 1
+        <if test="parentId != null">
+            and parent_id = #{parentId}
+        </if>
+        <if test="name != null and name != ''">
+            and name LIKE CONCAT(CONCAT('%',#{name}),'%')
+        </if>
     </select>
     <select id="findRightByUserSno" resultType="java.lang.String">
-         SELECT sre.res_url FROM user_role ur LEFT JOIN user u ON u.sno = ur.user_sno
-             LEFT JOIN role r ON ur.role_id=r.id LEFT JOIN role_right rr ON ur.role_id = rr.role_id
-             LEFT JOIN "right" ri ON ri.id = rr.right_id
-             WHERE u.sno=#{userSno}
+         SELECT DISTINCT ri.url FROM user_role ur LEFT JOIN user u ON u.sno = ur.user_sno
+         LEFT JOIN role r ON ur.role_id=r.id LEFT JOIN role_right rr ON ur.role_id = rr.role_id
+          LEFT JOIN `right` ri ON ri.id = rr.right_id WHERE u.sno=#{userSno}
+    </select>
+    <select id="findRightByRoleId" resultMap="right">
+        select * from `right` r inner join role_right rr on r.id = rr.right_id where 1 = 1
+        <if test="roleId != null">
+            and rr.role_id = #{roleId}
+        </if>
+        <if test="parentId != null">
+            and r.parent_id = #{parentId}
+        </if>
     </select>
 
 

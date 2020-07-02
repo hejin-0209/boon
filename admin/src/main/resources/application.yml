@@ -5,8 +5,13 @@ server:
       timeout: 30m
 
 spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/boon?characterEncoding=utf-8
+    username: root
+    password: root
   application:
-    name: shopping-admin
+    name: boon-admin
   redis:
     host: 127.0.0.1
     port: 6379
@@ -40,7 +45,7 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 
-# fastDFS的配置
+#关于fastDfs的配置
 fdfs:
   so-timeout: 1501
   connect-timeout: 601
@@ -48,12 +53,12 @@ fdfs:
     width: 100
     height: 100
   tracker-list:
-    -39.108.98.95:22122
+    - 39.108.98.95:22122
 
 # token的过期时间，单位是秒，这里设置为30分钟
 token:
   expire:
-    seconds: 30
+    seconds: 1800
 
 
 
